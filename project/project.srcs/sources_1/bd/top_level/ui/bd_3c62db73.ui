@@ -1,0 +1,50 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-562,-290",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeReset":"true",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layers":"/lvds/clk_1:true|/lvds/resetn_1:true|",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port axis_out -pg 1 -lvl 5 -x 1160 -y 110 -defaultsOSRD
+preplace port S_AXI -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace port port-id_sys_clk -pg 1 -lvl 5 -x 1160 -y 130 -defaultsOSRD -right
+preplace port port-id_sys_resetn -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace port port-id_clk_192 -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace inst fake_lvds -pg 1 -lvl 3 -x 720 -y 90 -defaultsOSRD -pinDir axis_out right -pinY axis_out 20R -pinDir clk left -pinY clk 20L -pinDir resetn left -pinY resetn 40L -pinBusDir frame_count left -pinBusY frame_count 60L -pinDir start_stb left -pinY start_stb 80L -pinDir busy left -pinY busy 100L
+preplace inst convert_192_to_sys_clk -pg 1 -lvl 4 -x 1010 -y 90 -swap {0 1 2 3 4 5 6 7 9 8 10} -defaultsOSRD -pinDir S_AXIS left -pinY S_AXIS 20L -pinDir M_AXIS right -pinY M_AXIS 20R -pinDir s_axis_aresetn left -pinY s_axis_aresetn 160L -pinDir s_axis_aclk left -pinY s_axis_aclk 40L -pinDir m_axis_aclk right -pinY m_axis_aclk 40R
+preplace inst resetn_192 -pg 1 -lvl 1 -x 120 -y 50 -defaultsOSRD -pinDir dest_clk left -pinY dest_clk 20L -pinDir dest_arst right -pinY dest_arst 40R -pinDir src_arst left -pinY src_arst 40L
+preplace inst fake_lvds_ctl -pg 1 -lvl 2 -x 390 -y 130 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 23 24 22} -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 20L -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L -pinDir start_stb right -pinY start_stb 40R -pinDir sender_busy right -pinY sender_busy 60R -pinBusDir frame_count right -pinBusY frame_count 20R
+preplace netloc sys_resetn_1 1 0 1 NJ 90
+preplace netloc clk192_1 1 0 4 20 10 220 50 560 50 880J
+preplace netloc sync_resetn_dest_arst 1 1 3 240 90 540 250 NJ
+preplace netloc sys_clk_1 1 4 1 NJ 130
+preplace netloc fake_lvds_ctl_start_stb 1 2 1 N 170
+preplace netloc fake_lvds_ctl_frame_count 1 2 1 N 150
+preplace netloc fake_lvds_busy 1 2 1 N 190
+preplace netloc axis_data_fifo_M_AXIS 1 4 1 NJ 110
+preplace netloc fake_lvds_axis_out 1 3 1 N 110
+preplace netloc S_AXI_1 1 0 2 NJ 150 NJ
+levelinfo -pg 1 0 120 390 720 1010 1160
+pagesize -pg 1 -db -bbox -sgen -130 0 1270 310
+",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"668,-313",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port axis_out -pg 1 -lvl 2 -x 360 -y 80 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_resetn -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace inst fake_lvds -pg 1 -lvl 1 -x 180 -y 90 -defaultsOSRD
+preplace netloc clk_1 1 0 1 NJ 60
+preplace netloc resetn_1 1 0 1 NJ 80
+preplace netloc fake_lvds_0_axis_out 1 1 1 N 80
+levelinfo -pg 1 0 180 360
+pagesize -pg 1 -db -bbox -sgen -100 0 470 180
+"
+}
+

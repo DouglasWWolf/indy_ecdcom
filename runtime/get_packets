@@ -1,0 +1,4 @@
+source api
+count=$1
+test -z $count && count=1
+axi REG_GET_PACKETS $count

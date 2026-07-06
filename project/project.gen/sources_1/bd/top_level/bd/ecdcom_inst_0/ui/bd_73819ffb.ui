@@ -1,0 +1,80 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"0.840369",
+   "Default View_TopLeft":"-395,1",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port lvds_out -pg 1 -lvl 4 -x 1020 -y 60 -defaultsOSRD
+preplace port qsfp0_clk -pg 1 -lvl 4 -x 1020 -y 290 -defaultsOSRD -right
+preplace port qsfp0_gt -pg 1 -lvl 4 -x 1020 -y 270 -defaultsOSRD
+preplace port qsfp1_clk -pg 1 -lvl 4 -x 1020 -y 330 -defaultsOSRD -right
+preplace port qsfp1_gt -pg 1 -lvl 4 -x 1020 -y 310 -defaultsOSRD
+preplace port uwdata_in -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
+preplace port port-id_fd_fifo_full -pg 1 -lvl 4 -x 1020 -y 180 -defaultsOSRD
+preplace port port-id_lvds_underflow -pg 1 -lvl 4 -x 1020 -y 80 -defaultsOSRD
+preplace port port-id_reset_done -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD -left
+preplace port port-id_reset_stb -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace port port-id_start_stb -pg 1 -lvl 4 -x 1020 -y 140 -defaultsOSRD -right
+preplace port port-id_uw_overflow -pg 1 -lvl 0 -x 0 -y 480 -defaultsOSRD -left
+preplace port port-id_lvds_clk -pg 1 -lvl 4 -x 1020 -y 100 -defaultsOSRD -right
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace portBus eth_link_state -pg 1 -lvl 4 -x 1020 -y 350 -defaultsOSRD
+preplace portBus fd0_packet_count -pg 1 -lvl 4 -x 1020 -y 120 -defaultsOSRD
+preplace portBus fd1_packet_count -pg 1 -lvl 4 -x 1020 -y 160 -defaultsOSRD
+preplace portBus qsfp0_malformed -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD -left
+preplace portBus qsfp0_up -pg 1 -lvl 4 -x 1020 -y 370 -defaultsOSRD
+preplace portBus qsfp1_malformed -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD -left
+preplace portBus qsfp1_up -pg 1 -lvl 4 -x 1020 -y 390 -defaultsOSRD
+preplace portBus qsfp_lp -pg 1 -lvl 4 -x 1020 -y 430 -defaultsOSRD
+preplace portBus qsfp_rst_l -pg 1 -lvl 4 -x 1020 -y 410 -defaultsOSRD
+preplace inst cmac -pg 1 -lvl 3 -x 850 -y 250 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 33 22 23 24 25 21 27 28 29 30 31 32 26 34 35 36 37 38 39 40 41 43 44 45 46 42} -defaultsOSRD -pinDir qsfp0_gt right -pinY qsfp0_gt 20R -pinDir qsfp0_clk right -pinY qsfp0_clk 40R -pinDir tx0_in left -pinY tx0_in 20L -pinDir qsfp1_gt right -pinY qsfp1_gt 60R -pinDir qsfp1_clk right -pinY qsfp1_clk 80R -pinDir tx1_in left -pinY tx1_in 190L -pinDir rx0_out left -pinY rx0_out 40L -pinDir rx1_out left -pinY rx1_out 60L -pinDir sys_clk left -pinY sys_clk 210L -pinDir sys_resetn_in left -pinY sys_resetn_in 230L -pinBusDir qsfp0_up right -pinBusY qsfp0_up 120R -pinBusDir qsfp1_up right -pinBusY qsfp1_up 140R -pinBusDir qsfp_rst_l right -pinBusY qsfp_rst_l 160R -pinBusDir qsfp_lp right -pinBusY qsfp_lp 180R -pinBusDir eth_link_state right -pinBusY eth_link_state 100R
+preplace inst fd_manager -pg 1 -lvl 3 -x 850 -y 40 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 20 23 18 19 22 24 25 21} -defaultsOSRD -pinDir fd_in0 left -pinY fd_in0 40L -pinDir fd_in1 left -pinY fd_in1 60L -pinDir lvds_out right -pinY lvds_out 20R -pinDir axis_out left -pinY axis_out 80L -pinDir clk left -pinY clk 100L -pinDir resetn left -pinY resetn 140L -pinDir start_stb right -pinY start_stb 100R -pinDir enable left -pinY enable 120L -pinDir lvds_underflow right -pinY lvds_underflow 40R -pinBusDir fd0_packet_count right -pinBusY fd0_packet_count 80R -pinBusDir fd1_packet_count right -pinBusY fd1_packet_count 120R -pinDir fd_fifo_full right -pinY fd_fifo_full 140R -pinDir lvds_clk right -pinY lvds_clk 60R
+preplace inst reset_mgr -pg 1 -lvl 1 -x 150 -y 200 -swap {2 0 1 3} -defaultsOSRD -pinDir clk left -pinY clk 60L -pinDir reset_stb left -pinY reset_stb 20L -pinDir reset_done left -pinY reset_done 40L -pinBusDir resetn_out right -pinBusY resetn_out 60R
+preplace inst routers -pg 1 -lvl 2 -x 470 -y 60 -swap {0 1 2 3 11 5 6 7 8 9 10 4 12 13 14 15 16 17 18 19 20 21 24 23 22 25 26} -defaultsOSRD -pinDir axis_fd0_out right -pinY axis_fd0_out 20R -pinDir axis_fd0_in right -pinY axis_fd0_in 230R -pinDir axis_fd1_out right -pinY axis_fd1_out 40R -pinDir axis_fd1_in right -pinY axis_fd1_in 250R -pinDir resetn left -pinY resetn 200L -pinDir enable right -pinY enable 270R -pinBusDir qsfp0_malformed left -pinBusY qsfp0_malformed 100L -pinBusDir qsfp1_malformed left -pinBusY qsfp1_malformed 250L -pinDir clk left -pinY clk 270L
+preplace inst uw_manager -pg 1 -lvl 2 -x 470 -y 420 -swap {0 1 2 3 4 5 6 7 8 11 9 10} -defaultsOSRD -pinDir axis_in left -pinY axis_in 20L -pinDir axis_out right -pinY axis_out 20R -pinDir clk left -pinY clk 80L -pinDir resetn left -pinY resetn 40L -pinDir fifo_overflow left -pinY fifo_overflow 60L
+preplace netloc clk_0_2 1 0 3 20 500 300 20 660
+preplace netloc cmac_eth_link_state 1 3 1 NJ 350
+preplace netloc cmac_qsfp0_up 1 3 1 NJ 370
+preplace netloc cmac_qsfp1_up 1 3 1 NJ 390
+preplace netloc cmac_qsfp_lp 1 3 1 NJ 430
+preplace netloc cmac_qsfp_rst_l 1 3 1 NJ 410
+preplace netloc ecdcom_mgr_enable 1 2 1 640 160n
+preplace netloc ecdcom_mgr_fd0_packet_count 1 3 1 NJ 120
+preplace netloc ecdcom_mgr_fd1_packet_count 1 3 1 NJ 160
+preplace netloc ecdcom_mgr_fd_fifo_full 1 3 1 NJ 180
+preplace netloc ecdcom_mgr_lvds_underflow 1 3 1 NJ 80
+preplace netloc ecdcom_reset_ctl_reset_done 1 0 1 NJ 240
+preplace netloc lvds_clk_0_1 1 3 1 NJ 100
+preplace netloc reset_mgr_resetn_out 1 1 2 280 380 680
+preplace netloc reset_stb_1 1 0 1 NJ 220
+preplace netloc routers_qsfp0_malformed 1 0 2 NJ 160 NJ
+preplace netloc routers_qsfp1_malformed 1 0 2 NJ 310 NJ
+preplace netloc start_stb_1 1 3 1 NJ 140
+preplace netloc uw_manager_fifo_overflow 1 0 2 NJ 480 NJ
+preplace netloc Conn1 1 3 1 NJ 330
+preplace netloc Conn2 1 3 1 NJ 290
+preplace netloc Conn3 1 3 1 NJ 270
+preplace netloc Conn4 1 3 1 NJ 310
+preplace netloc axis_fd0_in_1 1 2 1 N 290
+preplace netloc axis_fd1_in_1 1 2 1 N 310
+preplace netloc ecdcom_mgr_lvds_out 1 3 1 NJ 60
+preplace netloc ecdcom_router_0_axis_fdp 1 2 1 N 80
+preplace netloc ecdcom_router_1_axis_fdp 1 2 1 N 100
+preplace netloc rdmx_sequencer_0_axis_out 1 2 1 700 120n
+preplace netloc rdmx_sequencer_1_axis_out 1 2 1 N 440
+preplace netloc uwdata_in_1 1 0 2 NJ 440 NJ
+levelinfo -pg 1 0 150 470 850 1020
+pagesize -pg 1 -db -bbox -sgen -220 0 1240 550
+",
+   "No Loops_ScaleFactor":"0.948595",
+   "No Loops_TopLeft":"-219,-60",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+levelinfo -pg 1 0 10
+pagesize -pg 1 -db -bbox -sgen 0 0 10 10
+"
+}
+0

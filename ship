@@ -1,0 +1,19 @@
+bit=project/project.runs/impl_1/top_level_wrapper.bit
+ltx=project/project.runs/impl_1/top_level_wrapper.ltx
+
+manifest=manifest
+rm -rf $manifest
+mkdir $manifest
+if [ -f $bit ]; then
+    cp $bit $manifest
+else
+    echo "BITFILE NOT FOUND!"
+    exit 1 
+fi
+test -f $ltx && cp $ltx $manifest
+
+cp -r runtime $manifest
+scp -r $manifest wolf@192.168.1.53:/home/wolf
+rm -rf $manifest
+
+echo "Done"

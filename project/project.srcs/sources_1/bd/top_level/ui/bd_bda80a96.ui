@@ -1,0 +1,47 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-504,-279",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port S_AXIS -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port M_AXIS -pg 1 -lvl 3 -x 520 -y 100 -defaultsOSRD
+preplace port port-id_cmac_resetn -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port port-id_cmac_clk -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_sys_clk -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace inst rx_cdc -pg 1 -lvl 2 -x 380 -y 80 -defaultsOSRD -pinDir S_AXIS left -pinY S_AXIS 20L -pinDir M_AXIS right -pinY M_AXIS 20R -pinDir s_axis_aresetn left -pinY s_axis_aresetn 80L -pinDir s_axis_aclk left -pinY s_axis_aclk 100L -pinDir m_axis_aclk left -pinY m_axis_aclk 120L
+preplace inst axis_register_slice -pg 1 -lvl 1 -x 150 -y 40 -swap {0 1 2 3 4 5 6 7 8 9 10 11 13 12} -defaultsOSRD -pinDir S_AXIS left -pinY S_AXIS 20L -pinDir M_AXIS right -pinY M_AXIS 60R -pinDir aclk left -pinY aclk 60L -pinDir aresetn left -pinY aresetn 40L
+preplace netloc cmac_control_rx_resetn_out 1 0 2 40J 160 N
+preplace netloc cmac_usplus_gt_txusrclk2 1 0 2 20J 180 N
+preplace netloc sys_clk_1 1 0 2 NJ 200 N
+preplace netloc S_AXIS_1 1 0 1 N 60
+preplace netloc axis_data_fifo_0_M_AXIS 1 2 1 N 100
+preplace netloc axis_register_slice_M_AXIS 1 1 1 N 100
+levelinfo -pg 1 0 150 380 520
+pagesize -pg 1 -db -bbox -sgen -140 0 630 260
+",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"-449,-188",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port S_AXIS -pg 1 -lvl 0 -x -10 -y 50 -defaultsOSRD
+preplace port M_AXIS -pg 1 -lvl 3 -x 510 -y 80 -defaultsOSRD
+preplace port port-id_cmac_resetn -pg 1 -lvl 0 -x -10 -y -30 -defaultsOSRD
+preplace port port-id_cmac_clk -pg 1 -lvl 0 -x -10 -y 90 -defaultsOSRD
+preplace port port-id_sys_clk -pg 1 -lvl 0 -x -10 -y 110 -defaultsOSRD
+preplace inst rx_cdc -pg 1 -lvl 2 -x 370 -y 80 -defaultsOSRD
+preplace inst axis_register_slice -pg 1 -lvl 1 -x 140 -y -50 -defaultsOSRD
+preplace netloc cmac_control_rx_resetn_out 1 0 2 20J 70 N
+preplace netloc cmac_usplus_gt_txusrclk2 1 0 2 30J 90 N
+preplace netloc sys_clk_1 1 0 2 NJ 110 N
+preplace netloc axis_data_fifo_0_M_AXIS 1 2 1 N 80
+preplace netloc axis_register_slice_M_AXIS 1 1 1 250 -50n
+preplace netloc S_AXIS_1 1 0 1 10 -70n
+levelinfo -pg 1 -10 140 370 510
+pagesize -pg 1 -db -bbox -sgen -170 -130 620 310
+"
+}
+0

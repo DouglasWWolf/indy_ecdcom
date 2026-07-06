@@ -1,0 +1,90 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-383,-169",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layers":"/cmac/eth_1/cmac_usplus_gt_txusrclk2:true|/cmac/pcie_bridge_0_axi_aclk:true|/cmac/eth/cmac_usplus_gt_txusrclk2:true|/cmac/pcie_bridge_0_axi_aresetn:true|/cmac/eth/cmac_control_rx_resetn_out:true|/cmac/eth/cmac_control_reset_rx_datapath:true|/cmac/eth_1/cmac_control_reset_rx_datapath:true|/cmac/eth_1/cmac_control_rx_resetn_out:true|/cmac/eth0/cmac_usplus_gt_txusrclk2:true|/cmac/eth0/cmac_control_reset_rx_datapath:true|/cmac/eth0/cmac_control_rx_resetn_out:true|",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port qsfp0_gt -pg 1 -lvl 2 -x 340 -y 60 -defaultsOSRD
+preplace port qsfp0_clk -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port tx0_in -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port qsfp1_gt -pg 1 -lvl 2 -x 340 -y 210 -defaultsOSRD
+preplace port qsfp1_clk -pg 1 -lvl 0 -x 0 -y 210 -defaultsOSRD
+preplace port tx1_in -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
+preplace port rx0_out -pg 1 -lvl 2 -x 340 -y 80 -defaultsOSRD
+preplace port rx1_out -pg 1 -lvl 2 -x 340 -y 230 -defaultsOSRD
+preplace port port-id_sys_clk -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_sys_resetn_in -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace portBus qsfp0_up -pg 1 -lvl 2 -x 340 -y 100 -defaultsOSRD
+preplace portBus qsfp1_up -pg 1 -lvl 2 -x 340 -y 250 -defaultsOSRD
+preplace portBus qsfp_rst_l -pg 1 -lvl 2 -x 340 -y 360 -defaultsOSRD
+preplace portBus qsfp_lp -pg 1 -lvl 2 -x 340 -y 380 -defaultsOSRD
+preplace inst eth0 -pg 1 -lvl 1 -x 180 -y 40 -swap {0 1 2 3 4 12 6 7 8 9 10 11 5 13 14 15 17 16 18 19} -defaultsOSRD -pinDir gt_serial_port right -pinY gt_serial_port 20R -pinDir gt_ref_clk left -pinY gt_ref_clk 40L -pinDir rx_out right -pinY rx_out 40R -pinDir tx_in left -pinY tx_in 20L -pinDir sys_resetn_in left -pinY sys_resetn_in 80L -pinDir sys_clk left -pinY sys_clk 60L -pinBusDir rx_aligned right -pinBusY rx_aligned 60R -pinDir cmac_clk right -pinY cmac_clk 80R
+preplace inst eth_1 -pg 1 -lvl 1 -x 180 -y 190 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 18 17 19 20} -defaultsOSRD -pinDir gt_serial_port right -pinY gt_serial_port 20R -pinDir gt_ref_clk left -pinY gt_ref_clk 20L -pinDir rx_out right -pinY rx_out 40R -pinDir tx_in left -pinY tx_in 40L -pinDir sys_resetn_in left -pinY sys_resetn_in 80L -pinDir sys_clk left -pinY sys_clk 60L -pinBusDir rx_aligned right -pinBusY rx_aligned 60R -pinDir cmac_clk right -pinY cmac_clk 80R
+preplace inst qsfp_pins -pg 1 -lvl 1 -x 180 -y 340 -defaultsOSRD -pinBusDir qsfp_rst_l right -pinBusY qsfp_rst_l 20R -pinBusDir qsfp_lp right -pinBusY qsfp_lp 40R
+preplace netloc channel_0_rx_aligned 1 1 1 NJ 100
+preplace netloc channel_1_rx_aligned 1 1 1 NJ 250
+preplace netloc pcie_bridge_0_axi_aclk 1 0 1 40J 100n
+preplace netloc pcie_bridge_0_axi_aresetn 1 0 1 20J 120n
+preplace netloc qsfp_pins_qsfp_rst_l 1 1 1 NJ 360
+preplace netloc qsfp_pins_qsfp_lp 1 1 1 NJ 380
+preplace netloc channel_1_qsfp_gt 1 1 1 NJ 210
+preplace netloc eth0_gt_serial_port 1 1 1 NJ 60
+preplace netloc eth0_rx_out 1 1 1 N 80
+preplace netloc eth_1_rx_out 1 1 1 N 230
+preplace netloc gt_ref_clk_0_1 1 0 1 NJ 80
+preplace netloc mindy_core_AXIS_TX0 1 0 1 NJ 60
+preplace netloc mindy_core_AXIS_TX1 1 0 1 NJ 230
+preplace netloc qsfp_clk_0_1 1 0 1 NJ 210
+levelinfo -pg 1 0 180 340
+pagesize -pg 1 -db -bbox -sgen -150 0 500 440
+",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"-516,-95",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port qsfp0_gt -pg 1 -lvl 3 -x 730 -y 60 -defaultsOSRD
+preplace port qsfp0_clk -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port tx0_in -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port M_AXI0 -pg 1 -lvl 3 -x 730 -y 130 -defaultsOSRD
+preplace port qsfp1_gt -pg 1 -lvl 3 -x 730 -y 240 -defaultsOSRD
+preplace port qsfp1_clk -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace port tx1_in -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace port M_AXI1 -pg 1 -lvl 3 -x 730 -y 310 -defaultsOSRD
+preplace port port-id_sys_clk -pg 1 -lvl 0 -x 0 -y 280 -defaultsOSRD
+preplace port port-id_sys_resetn_in -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port port-id_cmac_clk0 -pg 1 -lvl 3 -x 730 -y 200 -defaultsOSRD
+preplace port port-id_cmac_clk1 -pg 1 -lvl 3 -x 730 -y 380 -defaultsOSRD
+preplace portBus qsfp0_up -pg 1 -lvl 3 -x 730 -y 220 -defaultsOSRD
+preplace portBus qsfp1_up -pg 1 -lvl 3 -x 730 -y 400 -defaultsOSRD
+preplace inst eth -pg 1 -lvl 1 -x 170 -y 90 -defaultsOSRD
+preplace inst rdmx_recv -pg 1 -lvl 2 -x 540 -y 140 -defaultsOSRD
+preplace inst eth_1 -pg 1 -lvl 1 -x 170 -y 270 -defaultsOSRD
+preplace inst rdmx_recv_1 -pg 1 -lvl 2 -x 540 -y 320 -defaultsOSRD
+preplace netloc pcie_bridge_0_axi_aclk 1 0 2 20 170 340
+preplace netloc pcie_bridge_0_axi_aresetn 1 0 2 30 180 350
+preplace netloc channel_0_rx_aligned 1 1 2 360J 220 NJ
+preplace netloc channel_0_cmac_clk 1 1 2 310J 230 710J
+preplace netloc channel_1_rx_aligned 1 1 2 320J 400 NJ
+preplace netloc channel_1_cmac_clk 1 1 2 310J 410 710J
+preplace netloc eth0_gt_serial_port 1 1 2 NJ 60 NJ
+preplace netloc gt_ref_clk_0_1 1 0 1 NJ 60
+preplace netloc mindy_core_AXIS_TX0 1 0 1 NJ 80
+preplace netloc channel_0_M_AXI 1 2 1 NJ 130
+preplace netloc channel_1_qsfp_gt 1 1 2 NJ 240 NJ
+preplace netloc qsfp_clk_0_1 1 0 1 NJ 240
+preplace netloc mindy_core_AXIS_TX1 1 0 1 NJ 260
+preplace netloc channel_1_M_AXI 1 2 1 NJ 310
+preplace netloc eth_rx_out 1 1 1 370 80n
+preplace netloc eth_rx_out_1 1 1 1 330 260n
+levelinfo -pg 1 0 170 540 730
+pagesize -pg 1 -db -bbox -sgen -150 0 880 420
+"
+}
+0

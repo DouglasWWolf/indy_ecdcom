@@ -1,0 +1,10 @@
+source api
+
+echo "REG_OVERFLOW = " $(get REG_UW_OVERFLOW)
+axi REG_UW_IPG   0 
+axi REG_UW_LIMIT 1000
+axi REG_UW_START 1
+axi REG_UW_IPG   64
+
+sleep .5 
+echo "REG_OVERFLOW = " $(get REG_UW_OVERFLOW)

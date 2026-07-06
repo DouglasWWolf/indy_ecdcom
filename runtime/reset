@@ -1,0 +1,15 @@
+source api
+
+# Reset the self-test mechansim
+axi REG_SELFTEST_ERR 0
+
+# Reset the rest of the system
+axi REG_RESET 1
+
+# Wait for the system to come out of reset
+while [ $(get REG_RESET) -ne 0 ]; do
+    sleep .1
+done
+
+# Wait for the Ethernet switch to reconnect
+sleep 4

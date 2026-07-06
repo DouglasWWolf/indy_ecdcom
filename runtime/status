@@ -1,0 +1,10 @@
+source api
+echo "REG_READY          = " $(get REG_READY)
+echo "REG_LVDS_UNDERFLOW = " $(get REG_LVDS_UNDERFLOW)
+echo "REG_SELFTEST_ERR   = " $(get REG_SELFTEST_ERR)
+echo "Rcvd on QSFP_0     = " $(get REG_FD0_RCVD)
+echo "Rcvd on QSFP_1     = " $(get REG_FD1_RCVD)
+echo
+echo "REG_LINK_STATE     = " $(get REG_LINK_STATE)
+echo "REG_UW_OVERFLOW    = " $(get REG_UW_OVERFLOW)
+
