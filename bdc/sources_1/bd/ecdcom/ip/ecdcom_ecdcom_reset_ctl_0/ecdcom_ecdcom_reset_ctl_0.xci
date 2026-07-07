@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "ecdcom_ecdcom_reset_ctl_0",
-    "cell_name": "reset_mgr/ecdcom_reset_ctl",
+    "cell_name": "ecdcom_reset_ctl",
     "component_reference": "xilinx.com:module_ref:ecdcom_reset_ctl:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../project.gen/sources_1/bd/ecdcom/ip/ecdcom_ecdcom_reset_ctl_0",

@@ -174,13 +174,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../bdc/sources_1/bd/ecdcom/src/ecdcom_reset_ctl.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../bdc/sources_1/bd/ecdcom/src/ecdcom_rdmx_decoder.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -203,6 +196,13 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../bdc/sources_1/bd/ecdcom/src/ecdcom_uw_buffer.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../bdc/sources_1/bd/ecdcom/src/ecdcom_reset_ctl.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
