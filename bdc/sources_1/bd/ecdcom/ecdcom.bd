@@ -2165,6 +2165,9 @@
                     "value": "1",
                     "value_src": "constant"
                   },
+                  "FREQ_HZ": {
+                    "value": "250000000"
+                  },
                   "CLK_DOMAIN": {
                     "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
@@ -2223,6 +2226,9 @@
                   "HAS_TLAST": {
                     "value": "1",
                     "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "250000000"
                   },
                   "CLK_DOMAIN": {
                     "value": "ecdcom_clk_0",
@@ -2659,8 +2665,8 @@
           "clk_1": {
             "ports": [
               "clk",
-              "ecdcom_mgr/clk",
-              "rdmx_sequencer/clk"
+              "rdmx_sequencer/clk",
+              "ecdcom_mgr/clk"
             ]
           },
           "ecdcom_mgr_enable": {
@@ -2702,8 +2708,8 @@
           "reset_mgr_resetn_out": {
             "ports": [
               "resetn",
-              "ecdcom_mgr/resetn",
-              "rdmx_sequencer/resetn"
+              "rdmx_sequencer/resetn",
+              "ecdcom_mgr/resetn"
             ]
           },
           "start_stb_1": {
@@ -3763,6 +3769,9 @@
                   "HAS_TLAST": {
                     "value": "1",
                     "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "250000000"
                   },
                   "CLK_DOMAIN": {
                     "value": "ecdcom_clk_0",

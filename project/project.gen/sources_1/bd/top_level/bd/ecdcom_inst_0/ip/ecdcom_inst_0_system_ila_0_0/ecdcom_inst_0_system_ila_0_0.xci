@@ -4009,16 +4009,25 @@
     "boundary": {
       "ports": {
         "clk": [ { "direction": "in" } ],
-        "SLOT_0_AXIS_tdata": [ { "direction": "in", "size_left": "511", "size_right": "0", "driver_value": "0" } ],
-        "SLOT_0_AXIS_tlast": [ { "direction": "in", "driver_value": "0" } ],
-        "SLOT_0_AXIS_tvalid": [ { "direction": "in", "driver_value": "0" } ],
-        "SLOT_0_AXIS_tready": [ { "direction": "in", "driver_value": "1" } ],
-        "SLOT_1_AXIS_tdata": [ { "direction": "in", "size_left": "511", "size_right": "0", "driver_value": "0" } ],
-        "SLOT_1_AXIS_tkeep": [ { "direction": "in", "size_left": "63", "size_right": "0", "driver_value": "1" } ],
-        "SLOT_1_AXIS_tlast": [ { "direction": "in", "driver_value": "0" } ],
-        "SLOT_1_AXIS_tuser": [ { "direction": "in", "size_left": "0", "size_right": "0", "driver_value": "0" } ],
-        "SLOT_1_AXIS_tvalid": [ { "direction": "in", "driver_value": "0" } ],
-        "resetn": [ { "direction": "in", "driver_value": "1" } ]
+        "SLOT_0_AXIS_tid": [ { "direction": "in", "driver_value": "0" } ],
+        "SLOT_0_AXIS_tdest": [ { "direction": "in", "driver_value": "0" } ],
+        "SLOT_0_AXIS_tdata": [ { "direction": "in", "driver_value": "0" } ],
+        "SLOT_0_AXIS_tstrb": [ { "direction": "in", "driver_value": "1" } ],
+        "SLOT_0_AXIS_tkeep": [ { "direction": "in", "driver_value": "1" } ],
+        "SLOT_0_AXIS_tlast": [ { "direction": "in", "size_left": "0", "size_right": "0", "driver_value": "0" } ],
+        "SLOT_0_AXIS_tuser": [ { "direction": "in", "driver_value": "0" } ],
+        "SLOT_0_AXIS_tvalid": [ { "direction": "in", "size_left": "0", "size_right": "0" } ],
+        "SLOT_0_AXIS_tready": [ { "direction": "in", "size_left": "0", "size_right": "0", "driver_value": "1" } ],
+        "SLOT_1_AXIS_tid": [ { "direction": "in", "driver_value": "0" } ],
+        "SLOT_1_AXIS_tdest": [ { "direction": "in", "driver_value": "0" } ],
+        "SLOT_1_AXIS_tdata": [ { "direction": "in", "driver_value": "0" } ],
+        "SLOT_1_AXIS_tstrb": [ { "direction": "in", "driver_value": "1" } ],
+        "SLOT_1_AXIS_tkeep": [ { "direction": "in", "driver_value": "1" } ],
+        "SLOT_1_AXIS_tlast": [ { "direction": "in", "size_left": "0", "size_right": "0", "driver_value": "0" } ],
+        "SLOT_1_AXIS_tuser": [ { "direction": "in", "driver_value": "0" } ],
+        "SLOT_1_AXIS_tvalid": [ { "direction": "in", "size_left": "0", "size_right": "0" } ],
+        "SLOT_1_AXIS_tready": [ { "direction": "in", "size_left": "0", "size_right": "0", "driver_value": "1" } ],
+        "resetn": [ { "direction": "in" } ]
       },
       "interfaces": {
         "CLK.clk": {
@@ -4026,10 +4035,10 @@
           "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
           "mode": "slave",
           "parameters": {
-            "FREQ_HZ": [ { "value": "322265625", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_static_object": false } ],
+            "FREQ_HZ": [ { "value": "322265625", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_static_object": false } ],
             "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_static_object": false } ],
             "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_static_object": false } ],
-            "CLK_DOMAIN": [ { "value": "ecdcom_inst_0_cmac_usplus_0_gt_txusrclk2", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "ecdcom_cmac_usplus_0_gt_txusrclk2", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
             "ASSOCIATED_BUSIF": [ { "value": "SLOT_0_AXIS:SLOT_1_AXIS", "value_src": "user", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
             "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
             "ASSOCIATED_RESET": [ { "value": "resetn", "value_src": "user", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
@@ -4067,13 +4076,18 @@
             "HAS_TLAST": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_static_object": false } ],
             "FREQ_HZ": [ { "value": "322265625", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_static_object": false } ],
             "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_static_object": false } ],
-            "CLK_DOMAIN": [ { "value": "ecdcom_inst_0_cmac_usplus_0_gt_txusrclk2", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "ecdcom_cmac_usplus_0_gt_txusrclk2", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
             "LAYERED_METADATA": [ { "value": "undef", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
             "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_static_object": false } ]
           },
           "port_maps": {
+            "TID": [ { "physical_name": "SLOT_0_AXIS_tid" } ],
+            "TDEST": [ { "physical_name": "SLOT_0_AXIS_tdest" } ],
             "TDATA": [ { "physical_name": "SLOT_0_AXIS_tdata" } ],
+            "TSTRB": [ { "physical_name": "SLOT_0_AXIS_tstrb" } ],
+            "TKEEP": [ { "physical_name": "SLOT_0_AXIS_tkeep" } ],
             "TLAST": [ { "physical_name": "SLOT_0_AXIS_tlast" } ],
+            "TUSER": [ { "physical_name": "SLOT_0_AXIS_tuser" } ],
             "TVALID": [ { "physical_name": "SLOT_0_AXIS_tvalid" } ],
             "TREADY": [ { "physical_name": "SLOT_0_AXIS_tready" } ]
           }
@@ -4094,16 +4108,20 @@
             "HAS_TLAST": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_static_object": false } ],
             "FREQ_HZ": [ { "value": "322265625", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_static_object": false } ],
             "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_static_object": false } ],
-            "CLK_DOMAIN": [ { "value": "ecdcom_inst_0_cmac_usplus_0_gt_txusrclk2", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "ecdcom_cmac_usplus_0_gt_txusrclk2", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
             "LAYERED_METADATA": [ { "value": "undef", "value_permission": "bd", "resolve_type": "generated", "is_static_object": false } ],
             "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_static_object": false } ]
           },
           "port_maps": {
+            "TID": [ { "physical_name": "SLOT_1_AXIS_tid" } ],
+            "TDEST": [ { "physical_name": "SLOT_1_AXIS_tdest" } ],
             "TDATA": [ { "physical_name": "SLOT_1_AXIS_tdata" } ],
+            "TSTRB": [ { "physical_name": "SLOT_1_AXIS_tstrb" } ],
             "TKEEP": [ { "physical_name": "SLOT_1_AXIS_tkeep" } ],
             "TLAST": [ { "physical_name": "SLOT_1_AXIS_tlast" } ],
             "TUSER": [ { "physical_name": "SLOT_1_AXIS_tuser" } ],
-            "TVALID": [ { "physical_name": "SLOT_1_AXIS_tvalid" } ]
+            "TVALID": [ { "physical_name": "SLOT_1_AXIS_tvalid" } ],
+            "TREADY": [ { "physical_name": "SLOT_1_AXIS_tready" } ]
           }
         }
       }

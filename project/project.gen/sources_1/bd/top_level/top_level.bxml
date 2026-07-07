@@ -44,7 +44,7 @@
       </File>
     </FileCollection>
     <BlockContainerCollection>
-      <BlockContainer InstPath="/ecdcom" IsPR="false" State="Validated">
+      <BlockContainer InstPath="/ecdcom" IsPR="false" State="Stale">
         <ActiveVariantSynth FileName="bd/ecdcom_inst_0/ecdcom_inst_0.bd"/>
         <ActiveVariantSim FileName="bd/ecdcom_inst_0/ecdcom_inst_0.bd"/>
         <VariantsCollection>

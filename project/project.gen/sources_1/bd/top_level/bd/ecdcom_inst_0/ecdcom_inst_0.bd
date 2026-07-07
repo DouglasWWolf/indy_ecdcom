@@ -1,14 +1,13 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB2AD5D58E63B3C70",
+      "boundary_crc": "0xB2AD5D58C465E75F",
       "design_src": "/home/wolf/fpga/indy_ecdcom/bdc/sources_1/bd/ecdcom/ecdcom.bd",
       "device": "xcku15p-ffve1517-3-e",
       "name": "ecdcom_inst_0",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2024.2",
-      "validated": "true",
       "variant": "true"
     },
     "design_tree": {
@@ -76,23 +75,23 @@
           },
           "FREQ_HZ": {
             "value": "192000000",
-            "value_src": "ip_prop"
+            "value_src": "default"
           },
           "HAS_TKEEP": {
             "value": "0",
-            "value_src": "const_prop"
+            "value_src": "default"
           },
           "HAS_TLAST": {
             "value": "0",
-            "value_src": "const_prop"
+            "value_src": "default"
           },
           "HAS_TREADY": {
             "value": "1",
-            "value_src": "const_prop"
+            "value_src": "default"
           },
           "HAS_TSTRB": {
             "value": "0",
-            "value_src": "const_prop"
+            "value_src": "default"
           },
           "INSERT_VIP": {
             "value": "0",
@@ -104,23 +103,23 @@
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "ip_prop"
+            "value_src": "default"
           },
           "TDATA_NUM_BYTES": {
             "value": "64",
-            "value_src": "const_prop"
+            "value_src": "default"
           },
           "TDEST_WIDTH": {
             "value": "0",
-            "value_src": "const_prop"
+            "value_src": "default"
           },
           "TID_WIDTH": {
             "value": "0",
-            "value_src": "const_prop"
+            "value_src": "default"
           },
           "TUSER_WIDTH": {
             "value": "0",
-            "value_src": "const_prop"
+            "value_src": "default"
           }
         },
         "port_maps": {
@@ -151,7 +150,7 @@
           },
           "FREQ_HZ": {
             "value": "322265625",
-            "value_src": "user_prop"
+            "value_src": "strong"
           }
         },
         "port_maps": {
@@ -213,7 +212,7 @@
           },
           "FREQ_HZ": {
             "value": "322265625",
-            "value_src": "user_prop"
+            "value_src": "strong"
           }
         },
         "port_maps": {
@@ -275,23 +274,23 @@
           },
           "FREQ_HZ": {
             "value": "250000000",
-            "value_src": "user_prop"
+            "value_src": "strong"
           },
           "HAS_TKEEP": {
             "value": "0",
-            "value_src": "const_prop"
+            "value_src": "strong"
           },
           "HAS_TLAST": {
             "value": "1",
-            "value_src": "const_prop"
+            "value_src": "strong"
           },
           "HAS_TREADY": {
             "value": "0",
-            "value_src": "const_prop"
+            "value_src": "strong"
           },
           "HAS_TSTRB": {
             "value": "0",
-            "value_src": "const_prop"
+            "value_src": "strong"
           },
           "INSERT_VIP": {
             "value": "0",
@@ -299,27 +298,27 @@
           },
           "LAYERED_METADATA": {
             "value": "undef",
-            "value_src": "default_prop"
+            "value_src": "strong"
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "default_prop"
+            "value_src": "strong"
           },
           "TDATA_NUM_BYTES": {
             "value": "64",
-            "value_src": "const_prop"
+            "value_src": "strong"
           },
           "TDEST_WIDTH": {
             "value": "0",
-            "value_src": "const_prop"
+            "value_src": "strong"
           },
           "TID_WIDTH": {
             "value": "0",
-            "value_src": "const_prop"
+            "value_src": "strong"
           },
           "TUSER_WIDTH": {
             "value": "0",
-            "value_src": "const_prop"
+            "value_src": "strong"
           }
         },
         "port_maps": {
@@ -402,13 +401,7 @@
         }
       },
       "reset_stb": {
-        "direction": "I",
-        "parameters": {
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default_prop"
-          }
-        }
+        "direction": "I"
       },
       "start_stb": {
         "direction": "I"
@@ -425,12 +418,12 @@
             "value_src": "strong"
           },
           "CLK_DOMAIN": {
-            "value": "top_level_clk_wiz_0_0_lvds_clk",
-            "value_src": "default_prop"
+            "value": "ecdcom_lvds_clk",
+            "value_src": "strong"
           },
           "FREQ_HZ": {
             "value": "192000000",
-            "value_src": "ip_prop"
+            "value_src": "strong"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -442,7 +435,7 @@
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "ip_prop"
+            "value_src": "strong"
           }
         }
       },
@@ -455,12 +448,12 @@
             "value_src": "strong"
           },
           "CLK_DOMAIN": {
-            "value": "top_level_xdma_0_0_axi_aclk",
-            "value_src": "default_prop"
+            "value": "ecdcom_clk_0",
+            "value_src": "strong"
           },
           "FREQ_HZ": {
             "value": "250000000",
-            "value_src": "user_prop"
+            "value_src": "strong"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -472,7 +465,7 @@
           },
           "PHASE": {
             "value": "0.0",
-            "value_src": "default_prop"
+            "value_src": "strong"
           }
         }
       }
@@ -487,27 +480,19 @@
             "port_maps": {
               "GRX_N": {
                 "physical_name": "qsfp0_gt_grx_n",
-                "direction": "I",
-                "left": "3",
-                "right": "0"
+                "direction": "I"
               },
               "GRX_P": {
                 "physical_name": "qsfp0_gt_grx_p",
-                "direction": "I",
-                "left": "3",
-                "right": "0"
+                "direction": "I"
               },
               "GTX_N": {
                 "physical_name": "qsfp0_gt_gtx_n",
-                "direction": "O",
-                "left": "3",
-                "right": "0"
+                "direction": "O"
               },
               "GTX_P": {
                 "physical_name": "qsfp0_gt_gtx_p",
-                "direction": "O",
-                "left": "3",
-                "right": "0"
+                "direction": "O"
               }
             }
           },
@@ -541,9 +526,7 @@
               },
               "TDATA": {
                 "physical_name": "tx0_in_tdata",
-                "direction": "I",
-                "left": "511",
-                "right": "0"
+                "direction": "I"
               },
               "TLAST": {
                 "physical_name": "tx0_in_tlast",
@@ -558,27 +541,19 @@
             "port_maps": {
               "GRX_N": {
                 "physical_name": "qsfp1_gt_grx_n",
-                "direction": "I",
-                "left": "3",
-                "right": "0"
+                "direction": "I"
               },
               "GRX_P": {
                 "physical_name": "qsfp1_gt_grx_p",
-                "direction": "I",
-                "left": "3",
-                "right": "0"
+                "direction": "I"
               },
               "GTX_N": {
                 "physical_name": "qsfp1_gt_gtx_n",
-                "direction": "O",
-                "left": "3",
-                "right": "0"
+                "direction": "O"
               },
               "GTX_P": {
                 "physical_name": "qsfp1_gt_gtx_p",
-                "direction": "O",
-                "left": "3",
-                "right": "0"
+                "direction": "O"
               }
             }
           },
@@ -612,9 +587,7 @@
               },
               "TDATA": {
                 "physical_name": "tx1_in_tdata",
-                "direction": "I",
-                "left": "511",
-                "right": "0"
+                "direction": "I"
               },
               "TLAST": {
                 "physical_name": "tx1_in_tlast",
@@ -629,15 +602,11 @@
             "port_maps": {
               "TDATA": {
                 "physical_name": "rx0_out_tdata",
-                "direction": "O",
-                "left": "511",
-                "right": "0"
+                "direction": "O"
               },
               "TKEEP": {
                 "physical_name": "rx0_out_tkeep",
-                "direction": "O",
-                "left": "63",
-                "right": "0"
+                "direction": "O"
               },
               "TLAST": {
                 "physical_name": "rx0_out_tlast",
@@ -664,15 +633,11 @@
             "port_maps": {
               "TDATA": {
                 "physical_name": "rx1_out_tdata",
-                "direction": "O",
-                "left": "511",
-                "right": "0"
+                "direction": "O"
               },
               "TKEEP": {
                 "physical_name": "rx1_out_tkeep",
-                "direction": "O",
-                "left": "63",
-                "right": "0"
+                "direction": "O"
               },
               "TLAST": {
                 "physical_name": "rx1_out_tlast",
@@ -736,27 +701,19 @@
                 "port_maps": {
                   "GRX_N": {
                     "physical_name": "gt_serial_port_grx_n",
-                    "direction": "I",
-                    "left": "3",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "GRX_P": {
                     "physical_name": "gt_serial_port_grx_p",
-                    "direction": "I",
-                    "left": "3",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "GTX_N": {
                     "physical_name": "gt_serial_port_gtx_n",
-                    "direction": "O",
-                    "left": "3",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "GTX_P": {
                     "physical_name": "gt_serial_port_gtx_p",
-                    "direction": "O",
-                    "left": "3",
-                    "right": "0"
+                    "direction": "O"
                   }
                 }
               },
@@ -782,15 +739,11 @@
                 "port_maps": {
                   "TDATA": {
                     "physical_name": "rx_out_tdata",
-                    "direction": "O",
-                    "left": "511",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "TKEEP": {
                     "physical_name": "rx_out_tkeep",
-                    "direction": "O",
-                    "left": "63",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "TLAST": {
                     "physical_name": "rx_out_tlast",
@@ -825,9 +778,7 @@
                   },
                   "TDATA": {
                     "physical_name": "tx_in_tdata",
-                    "direction": "I",
-                    "left": "511",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "TLAST": {
                     "physical_name": "tx_in_tlast",
@@ -1018,7 +969,7 @@
                         "value_src": "constant"
                       },
                       "CLK_DOMAIN": {
-                        "value": "ecdcom_inst_0_cmac_usplus_0_gt_txusrclk2",
+                        "value": "ecdcom_cmac_usplus_0_gt_txusrclk2",
                         "value_src": "default_prop"
                       }
                     }
@@ -1084,15 +1035,11 @@
                       },
                       "TDATA": {
                         "physical_name": "S_AXIS_tdata",
-                        "direction": "I",
-                        "left": "511",
-                        "right": "0"
+                        "direction": "I"
                       },
                       "TKEEP": {
                         "physical_name": "S_AXIS_tkeep",
-                        "direction": "I",
-                        "left": "63",
-                        "right": "0"
+                        "direction": "I"
                       },
                       "TLAST": {
                         "physical_name": "S_AXIS_tlast",
@@ -1100,9 +1047,7 @@
                       },
                       "TUSER": {
                         "physical_name": "S_AXIS_tuser",
-                        "direction": "I",
-                        "left": "0",
-                        "right": "0"
+                        "direction": "I"
                       }
                     }
                   },
@@ -1113,15 +1058,11 @@
                     "port_maps": {
                       "TDATA": {
                         "physical_name": "M_AXIS_tdata",
-                        "direction": "O",
-                        "left": "511",
-                        "right": "0"
+                        "direction": "O"
                       },
                       "TKEEP": {
                         "physical_name": "M_AXIS_tkeep",
-                        "direction": "O",
-                        "left": "63",
-                        "right": "0"
+                        "direction": "O"
                       },
                       "TLAST": {
                         "physical_name": "M_AXIS_tlast",
@@ -1257,9 +1198,7 @@
                       },
                       "TDATA": {
                         "physical_name": "S_AXIS_tdata",
-                        "direction": "I",
-                        "left": "511",
-                        "right": "0"
+                        "direction": "I"
                       },
                       "TLAST": {
                         "physical_name": "S_AXIS_tlast",
@@ -1274,9 +1213,7 @@
                     "port_maps": {
                       "TDATA": {
                         "physical_name": "M_AXIS_tdata",
-                        "direction": "O",
-                        "left": "511",
-                        "right": "0"
+                        "direction": "O"
                       },
                       "TLAST": {
                         "physical_name": "M_AXIS_tlast",
@@ -1603,27 +1540,19 @@
                 "port_maps": {
                   "GRX_N": {
                     "physical_name": "gt_serial_port_grx_n",
-                    "direction": "I",
-                    "left": "3",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "GRX_P": {
                     "physical_name": "gt_serial_port_grx_p",
-                    "direction": "I",
-                    "left": "3",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "GTX_N": {
                     "physical_name": "gt_serial_port_gtx_n",
-                    "direction": "O",
-                    "left": "3",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "GTX_P": {
                     "physical_name": "gt_serial_port_gtx_p",
-                    "direction": "O",
-                    "left": "3",
-                    "right": "0"
+                    "direction": "O"
                   }
                 }
               },
@@ -1649,15 +1578,11 @@
                 "port_maps": {
                   "TDATA": {
                     "physical_name": "rx_out_tdata",
-                    "direction": "O",
-                    "left": "511",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "TKEEP": {
                     "physical_name": "rx_out_tkeep",
-                    "direction": "O",
-                    "left": "63",
-                    "right": "0"
+                    "direction": "O"
                   },
                   "TLAST": {
                     "physical_name": "rx_out_tlast",
@@ -1692,9 +1617,7 @@
                   },
                   "TDATA": {
                     "physical_name": "tx_in_tdata",
-                    "direction": "I",
-                    "left": "511",
-                    "right": "0"
+                    "direction": "I"
                   },
                   "TLAST": {
                     "physical_name": "tx_in_tlast",
@@ -1885,7 +1808,7 @@
                         "value_src": "constant"
                       },
                       "CLK_DOMAIN": {
-                        "value": "ecdcom_inst_0_cmac_usplus_1_gt_txusrclk2",
+                        "value": "ecdcom_cmac_usplus_1_gt_txusrclk2",
                         "value_src": "default_prop"
                       }
                     }
@@ -1951,15 +1874,11 @@
                       },
                       "TDATA": {
                         "physical_name": "S_AXIS_tdata",
-                        "direction": "I",
-                        "left": "511",
-                        "right": "0"
+                        "direction": "I"
                       },
                       "TKEEP": {
                         "physical_name": "S_AXIS_tkeep",
-                        "direction": "I",
-                        "left": "63",
-                        "right": "0"
+                        "direction": "I"
                       },
                       "TLAST": {
                         "physical_name": "S_AXIS_tlast",
@@ -1967,9 +1886,7 @@
                       },
                       "TUSER": {
                         "physical_name": "S_AXIS_tuser",
-                        "direction": "I",
-                        "left": "0",
-                        "right": "0"
+                        "direction": "I"
                       }
                     }
                   },
@@ -1980,15 +1897,11 @@
                     "port_maps": {
                       "TDATA": {
                         "physical_name": "M_AXIS_tdata",
-                        "direction": "O",
-                        "left": "511",
-                        "right": "0"
+                        "direction": "O"
                       },
                       "TKEEP": {
                         "physical_name": "M_AXIS_tkeep",
-                        "direction": "O",
-                        "left": "63",
-                        "right": "0"
+                        "direction": "O"
                       },
                       "TLAST": {
                         "physical_name": "M_AXIS_tlast",
@@ -2124,9 +2037,7 @@
                       },
                       "TDATA": {
                         "physical_name": "S_AXIS_tdata",
-                        "direction": "I",
-                        "left": "511",
-                        "right": "0"
+                        "direction": "I"
                       },
                       "TLAST": {
                         "physical_name": "S_AXIS_tlast",
@@ -2141,9 +2052,7 @@
                     "port_maps": {
                       "TDATA": {
                         "physical_name": "M_AXIS_tdata",
-                        "direction": "O",
-                        "left": "511",
-                        "right": "0"
+                        "direction": "O"
                       },
                       "TLAST": {
                         "physical_name": "M_AXIS_tlast",
@@ -2500,12 +2409,8 @@
                     "value": "250000000",
                     "value_src": "user_prop"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 }
@@ -2633,9 +2538,7 @@
             "port_maps": {
               "TDATA": {
                 "physical_name": "fd_in0_tdata",
-                "direction": "I",
-                "left": "511",
-                "right": "0"
+                "direction": "I"
               },
               "TLAST": {
                 "physical_name": "fd_in0_tlast",
@@ -2654,9 +2557,7 @@
             "port_maps": {
               "TDATA": {
                 "physical_name": "fd_in1_tdata",
-                "direction": "I",
-                "left": "511",
-                "right": "0"
+                "direction": "I"
               },
               "TLAST": {
                 "physical_name": "fd_in1_tlast",
@@ -2675,9 +2576,7 @@
             "port_maps": {
               "TDATA": {
                 "physical_name": "lvds_out_tdata",
-                "direction": "O",
-                "left": "511",
-                "right": "0"
+                "direction": "O"
               },
               "TVALID": {
                 "physical_name": "lvds_out_tvalid",
@@ -2696,9 +2595,7 @@
             "port_maps": {
               "TDATA": {
                 "physical_name": "axis_out_tdata",
-                "direction": "O",
-                "left": "511",
-                "right": "0"
+                "direction": "O"
               },
               "TLAST": {
                 "physical_name": "axis_out_tlast",
@@ -2800,12 +2697,11 @@
                     "value": "1",
                     "value_src": "constant"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
+                  "FREQ_HZ": {
+                    "value": "250000000"
                   },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -2863,12 +2759,11 @@
                     "value": "1",
                     "value_src": "constant"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
+                  "FREQ_HZ": {
+                    "value": "250000000"
                   },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -2928,14 +2823,10 @@
                   },
                   "FREQ_HZ": {
                     "value": "192000000",
-                    "value_src": "ip_prop"
-                  },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "ip_prop"
+                    "value_src": "user_prop"
                   },
                   "CLK_DOMAIN": {
-                    "value": "top_level_clk_wiz_0_0_lvds_clk",
+                    "value": "ecdcom_lvds_clk",
                     "value_src": "default_prop"
                   }
                 },
@@ -2996,12 +2887,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -3039,12 +2926,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 }
@@ -3091,14 +2974,10 @@
                   },
                   "FREQ_HZ": {
                     "value": "192000000",
-                    "value_src": "ip_prop"
-                  },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "ip_prop"
+                    "value_src": "user_prop"
                   },
                   "CLK_DOMAIN": {
-                    "value": "top_level_clk_wiz_0_0_lvds_clk",
+                    "value": "ecdcom_lvds_clk",
                     "value_src": "default_prop"
                   }
                 }
@@ -3154,12 +3033,8 @@
                     "value": "1",
                     "value_src": "constant"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -3224,12 +3099,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -3271,12 +3142,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 }
@@ -3330,8 +3197,8 @@
           "clk_1": {
             "ports": [
               "clk",
-              "ecdcom_mgr/clk",
-              "rdmx_sequencer/clk"
+              "rdmx_sequencer/clk",
+              "ecdcom_mgr/clk"
             ]
           },
           "ecdcom_mgr_enable": {
@@ -3373,8 +3240,8 @@
           "reset_mgr_resetn_out": {
             "ports": [
               "resetn",
-              "ecdcom_mgr/resetn",
-              "rdmx_sequencer/resetn"
+              "rdmx_sequencer/resetn",
+              "ecdcom_mgr/resetn"
             ]
           },
           "start_stb_1": {
@@ -3430,25 +3297,15 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 }
               },
               "reset_stb": {
                 "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "default_prop"
-                  }
-                }
+                "direction": "I"
               },
               "resetn_out": {
                 "direction": "O"
@@ -3503,9 +3360,7 @@
             "port_maps": {
               "TDATA": {
                 "physical_name": "axis_fd0_out_tdata",
-                "direction": "O",
-                "left": "511",
-                "right": "0"
+                "direction": "O"
               },
               "TLAST": {
                 "physical_name": "axis_fd0_out_tlast",
@@ -3524,15 +3379,11 @@
             "port_maps": {
               "TDATA": {
                 "physical_name": "axis_fd0_in_tdata",
-                "direction": "I",
-                "left": "511",
-                "right": "0"
+                "direction": "I"
               },
               "TKEEP": {
                 "physical_name": "axis_fd0_in_tkeep",
-                "direction": "I",
-                "left": "63",
-                "right": "0"
+                "direction": "I"
               },
               "TLAST": {
                 "physical_name": "axis_fd0_in_tlast",
@@ -3559,9 +3410,7 @@
             "port_maps": {
               "TDATA": {
                 "physical_name": "axis_fd1_out_tdata",
-                "direction": "O",
-                "left": "511",
-                "right": "0"
+                "direction": "O"
               },
               "TLAST": {
                 "physical_name": "axis_fd1_out_tlast",
@@ -3580,15 +3429,11 @@
             "port_maps": {
               "TDATA": {
                 "physical_name": "axis_fd1_in_tdata",
-                "direction": "I",
-                "left": "511",
-                "right": "0"
+                "direction": "I"
               },
               "TKEEP": {
                 "physical_name": "axis_fd1_in_tkeep",
-                "direction": "I",
-                "left": "63",
-                "right": "0"
+                "direction": "I"
               },
               "TLAST": {
                 "physical_name": "axis_fd1_in_tlast",
@@ -3685,12 +3530,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -3748,12 +3589,8 @@
                     "value": "1",
                     "value_src": "constant"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -3791,12 +3628,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 }
@@ -3868,12 +3701,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -3931,12 +3760,8 @@
                     "value": "1",
                     "value_src": "constant"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -3974,12 +3799,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 }
@@ -4048,12 +3869,8 @@
                     "value": "1",
                     "value_src": "constant"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -4128,12 +3945,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -4185,12 +3998,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 }
@@ -4264,12 +4073,8 @@
                     "value": "1",
                     "value_src": "constant"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -4344,12 +4149,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -4401,12 +4202,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 }
@@ -4519,9 +4316,7 @@
             "port_maps": {
               "TDATA": {
                 "physical_name": "axis_in_tdata",
-                "direction": "I",
-                "left": "511",
-                "right": "0"
+                "direction": "I"
               },
               "TLAST": {
                 "physical_name": "axis_in_tlast",
@@ -4540,9 +4335,7 @@
             "port_maps": {
               "TDATA": {
                 "physical_name": "axis_out_tdata",
-                "direction": "O",
-                "left": "511",
-                "right": "0"
+                "direction": "O"
               },
               "TLAST": {
                 "physical_name": "axis_out_tlast",
@@ -4621,17 +4414,16 @@
                     "value": "1",
                     "value_src": "constant"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
+                  "FREQ_HZ": {
+                    "value": "250000000"
                   },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   },
                   "LAYERED_METADATA": {
                     "value": "undef",
-                    "value_src": "default_prop"
+                    "value_src": "user_prop"
                   }
                 },
                 "port_maps": {
@@ -4691,12 +4483,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -4738,12 +4526,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 }
@@ -4812,12 +4596,8 @@
                     "value": "1",
                     "value_src": "constant"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -4882,12 +4662,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 },
@@ -4929,12 +4705,8 @@
                   "FREQ_HZ": {
                     "value": "250000000"
                   },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "default_prop"
-                  },
                   "CLK_DOMAIN": {
-                    "value": "top_level_xdma_0_0_axi_aclk",
+                    "value": "ecdcom_clk_0",
                     "value_src": "default_prop"
                   }
                 }
