@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "ecdcom_uw_buffer_0",
-    "cell_name": "uw_buffer",
+    "cell_name": "uw_manager/uw_buffer",
     "component_reference": "xilinx.com:module_ref:ecdcom_uw_buffer:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../project.gen/sources_1/bd/ecdcom/ip/ecdcom_uw_buffer_0",

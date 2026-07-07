@@ -23,8 +23,7 @@
             "cdc_fifo": "",
             "packetizing_fifo": "",
             "slice": ""
-          },
-          "system_ila_0": ""
+          }
         },
         "eth_1": {
           "cmac_usplus": "",
@@ -37,8 +36,7 @@
             "cdc_fifo": "",
             "packetizing_fifo": "",
             "slice": ""
-          },
-          "system_ila_0": ""
+          }
         },
         "qsfp_rst_l": "",
         "qsfp_lp": "",
@@ -1365,44 +1363,6 @@
                     ]
                   }
                 }
-              },
-              "system_ila_0": {
-                "vlnv": "xilinx.com:ip:system_ila:1.1",
-                "ip_revision": "19",
-                "xci_name": "ecdcom_inst_0_system_ila_0_0",
-                "xci_path": "ip/ecdcom_inst_0_system_ila_0_0/ecdcom_inst_0_system_ila_0_0.xci",
-                "inst_hier_path": "cmac/eth0/system_ila_0",
-                "parameters": {
-                  "C_DATA_DEPTH": {
-                    "value": "4096"
-                  },
-                  "C_NUM_MONITOR_SLOTS": {
-                    "value": "2"
-                  },
-                  "C_SLOT": {
-                    "value": "1"
-                  },
-                  "C_SLOT_0_INTF_TYPE": {
-                    "value": "xilinx.com:interface:axis_rtl:1.0"
-                  },
-                  "C_SLOT_1_INTF_TYPE": {
-                    "value": "xilinx.com:interface:axis_rtl:1.0"
-                  }
-                },
-                "interface_ports": {
-                  "SLOT_0_AXIS": {
-                    "mode": "Monitor",
-                    "monitor_type": "SlaveType",
-                    "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-                    "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-                  },
-                  "SLOT_1_AXIS": {
-                    "mode": "Monitor",
-                    "monitor_type": "SlaveType",
-                    "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-                    "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-                  }
-                }
               }
             },
             "interface_nets": {
@@ -1439,8 +1399,7 @@
               "cmac_usplus_axis_rx": {
                 "interface_ports": [
                   "cmac_usplus/axis_rx",
-                  "rx_cdc/S_AXIS",
-                  "system_ila_0/SLOT_1_AXIS"
+                  "rx_cdc/S_AXIS"
                 ]
               },
               "cmac_usplus_gt_serial_port": {
@@ -1464,8 +1423,7 @@
               "tx_cdc_M_AXIS": {
                 "interface_ports": [
                   "tx_cdc/M_AXIS",
-                  "cmac_usplus/axis_tx",
-                  "system_ila_0/SLOT_0_AXIS"
+                  "cmac_usplus/axis_tx"
                 ]
               },
               "tx_in_1": {
@@ -1508,7 +1466,6 @@
                   "cmac_usplus/rx_clk",
                   "cmac_clk",
                   "tx_cdc/cmac_clk",
-                  "system_ila_0/clk",
                   "cmac_control/rx_clk"
                 ]
               },
@@ -2204,41 +2161,6 @@
                     ]
                   }
                 }
-              },
-              "system_ila_0": {
-                "vlnv": "xilinx.com:ip:system_ila:1.1",
-                "ip_revision": "19",
-                "xci_name": "ecdcom_inst_0_system_ila_0_1",
-                "xci_path": "ip/ecdcom_inst_0_system_ila_0_1/ecdcom_inst_0_system_ila_0_1.xci",
-                "inst_hier_path": "cmac/eth_1/system_ila_0",
-                "parameters": {
-                  "C_NUM_MONITOR_SLOTS": {
-                    "value": "2"
-                  },
-                  "C_SLOT": {
-                    "value": "1"
-                  },
-                  "C_SLOT_0_INTF_TYPE": {
-                    "value": "xilinx.com:interface:axis_rtl:1.0"
-                  },
-                  "C_SLOT_1_INTF_TYPE": {
-                    "value": "xilinx.com:interface:axis_rtl:1.0"
-                  }
-                },
-                "interface_ports": {
-                  "SLOT_0_AXIS": {
-                    "mode": "Monitor",
-                    "monitor_type": "SlaveType",
-                    "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-                    "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-                  },
-                  "SLOT_1_AXIS": {
-                    "mode": "Monitor",
-                    "monitor_type": "SlaveType",
-                    "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-                    "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-                  }
-                }
               }
             },
             "interface_nets": {
@@ -2275,8 +2197,7 @@
               "cmac_usplus_axis_rx": {
                 "interface_ports": [
                   "cmac_usplus/axis_rx",
-                  "rx_cdc/S_AXIS",
-                  "system_ila_0/SLOT_1_AXIS"
+                  "rx_cdc/S_AXIS"
                 ]
               },
               "cmac_usplus_gt_serial_port": {
@@ -2300,8 +2221,7 @@
               "tx_cdc_M_AXIS": {
                 "interface_ports": [
                   "tx_cdc/M_AXIS",
-                  "cmac_usplus/axis_tx",
-                  "system_ila_0/SLOT_0_AXIS"
+                  "cmac_usplus/axis_tx"
                 ]
               },
               "tx_in_1": {
@@ -2344,7 +2264,6 @@
                   "cmac_clk",
                   "rx_cdc/cmac_clk",
                   "tx_cdc/cmac_clk",
-                  "system_ila_0/clk",
                   "cmac_control/rx_clk"
                 ]
               },
