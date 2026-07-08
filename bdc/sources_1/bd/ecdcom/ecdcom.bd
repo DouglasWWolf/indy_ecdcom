@@ -14,29 +14,11 @@
       "cmac": {
         "eth0": {
           "cmac_usplus": "",
-          "cmac_control": "",
-          "rx_cdc": {
-            "cdc_fifo": "",
-            "axis_register_slice": ""
-          },
-          "tx_cdc": {
-            "cdc_fifo": "",
-            "packetizing_fifo": "",
-            "slice": ""
-          }
+          "cmac_control": ""
         },
         "eth_1": {
           "cmac_usplus": "",
-          "cmac_control": "",
-          "rx_cdc": {
-            "rx_cdc": "",
-            "axis_register_slice": ""
-          },
-          "tx_cdc": {
-            "cdc_fifo": "",
-            "packetizing_fifo": "",
-            "slice": ""
-          }
+          "cmac_control": ""
         },
         "qsfp_rst_l": "",
         "qsfp_lp": "",
@@ -44,17 +26,21 @@
       },
       "fd_manager": {
         "ecdcom_mgr": "",
-        "rdmx_sequencer": ""
+        "rdmx_sequencer": "",
+        "cmac_tx_cdc": ""
       },
       "routers": {
-        "ecdcom_router_0": "",
-        "ecdcom_router_1": "",
-        "qsfp0_bad_packet_filter": "",
-        "qsfp1_bad_packet_filter": ""
+        "cmac0_router": "",
+        "cmac1_router": "",
+        "cmac0_bad_packet_filter": "",
+        "cmac1_bad_packet_filter": "",
+        "cmac0_rx_cdc": "",
+        "cmac1_rx_cdc": ""
       },
       "uw_manager": {
         "uw_buffer": "",
-        "rdmx_sequencer": ""
+        "rdmx_sequencer": "",
+        "cmac_tx_cdc": ""
       },
       "ecdcom_reset_ctl": ""
     },
@@ -524,6 +510,12 @@
             "direction": "O",
             "left": "1",
             "right": "0"
+          },
+          "cmac0_clk": {
+            "direction": "O"
+          },
+          "cmac1_clk": {
+            "direction": "O"
           }
         },
         "components": {
@@ -784,275 +776,9 @@
                     "direction": "O"
                   }
                 }
-              },
-              "rx_cdc": {
-                "interface_ports": {
-                  "S_AXIS": {
-                    "mode": "Slave",
-                    "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-                    "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-                  },
-                  "M_AXIS": {
-                    "mode": "Master",
-                    "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-                    "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-                  }
-                },
-                "ports": {
-                  "cmac_resetn": {
-                    "type": "rst",
-                    "direction": "I"
-                  },
-                  "cmac_clk": {
-                    "type": "clk",
-                    "direction": "I"
-                  },
-                  "sys_clk": {
-                    "direction": "I"
-                  }
-                },
-                "components": {
-                  "cdc_fifo": {
-                    "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-                    "ip_revision": "15",
-                    "xci_name": "ecdcom_cdc_fifo_0",
-                    "xci_path": "ip/ecdcom_cdc_fifo_0/ecdcom_cdc_fifo_0.xci",
-                    "inst_hier_path": "cmac/eth0/rx_cdc/cdc_fifo",
-                    "parameters": {
-                      "FIFO_DEPTH": {
-                        "value": "16"
-                      },
-                      "IS_ACLK_ASYNC": {
-                        "value": "1"
-                      }
-                    },
-                    "interface_ports": {
-                      "S_AXIS": {
-                        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-                        "mode": "Slave",
-                        "bridges": [
-                          "M_AXIS"
-                        ]
-                      }
-                    }
-                  },
-                  "axis_register_slice": {
-                    "vlnv": "xilinx.com:ip:axis_register_slice:1.1",
-                    "ip_revision": "33",
-                    "xci_name": "ecdcom_axis_register_slice_0",
-                    "xci_path": "ip/ecdcom_axis_register_slice_0/ecdcom_axis_register_slice_0.xci",
-                    "inst_hier_path": "cmac/eth0/rx_cdc/axis_register_slice",
-                    "interface_ports": {
-                      "S_AXIS": {
-                        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-                        "mode": "Slave",
-                        "bridges": [
-                          "M_AXIS"
-                        ]
-                      }
-                    }
-                  }
-                },
-                "interface_nets": {
-                  "S_AXIS_1": {
-                    "interface_ports": [
-                      "S_AXIS",
-                      "axis_register_slice/S_AXIS"
-                    ]
-                  },
-                  "axis_data_fifo_0_M_AXIS": {
-                    "interface_ports": [
-                      "M_AXIS",
-                      "cdc_fifo/M_AXIS"
-                    ]
-                  },
-                  "axis_register_slice_0_M_AXIS": {
-                    "interface_ports": [
-                      "axis_register_slice/M_AXIS",
-                      "cdc_fifo/S_AXIS"
-                    ]
-                  }
-                },
-                "nets": {
-                  "cmac_control_rx_resetn_out": {
-                    "ports": [
-                      "cmac_resetn",
-                      "cdc_fifo/s_axis_aresetn",
-                      "axis_register_slice/aresetn"
-                    ]
-                  },
-                  "cmac_usplus_gt_txusrclk2": {
-                    "ports": [
-                      "cmac_clk",
-                      "cdc_fifo/s_axis_aclk",
-                      "axis_register_slice/aclk"
-                    ]
-                  },
-                  "sys_clk_1": {
-                    "ports": [
-                      "sys_clk",
-                      "cdc_fifo/m_axis_aclk"
-                    ]
-                  }
-                }
-              },
-              "tx_cdc": {
-                "interface_ports": {
-                  "S_AXIS": {
-                    "mode": "Slave",
-                    "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-                    "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-                  },
-                  "M_AXIS": {
-                    "mode": "Master",
-                    "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-                    "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-                  }
-                },
-                "ports": {
-                  "sys_resetn": {
-                    "direction": "I"
-                  },
-                  "sys_clk": {
-                    "direction": "I"
-                  },
-                  "cmac_clk": {
-                    "direction": "I"
-                  },
-                  "cmac_resetn": {
-                    "direction": "I"
-                  }
-                },
-                "components": {
-                  "cdc_fifo": {
-                    "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-                    "ip_revision": "15",
-                    "xci_name": "ecdcom_cdc_fifo_1",
-                    "xci_path": "ip/ecdcom_cdc_fifo_1/ecdcom_cdc_fifo_1.xci",
-                    "inst_hier_path": "cmac/eth0/tx_cdc/cdc_fifo",
-                    "parameters": {
-                      "FIFO_DEPTH": {
-                        "value": "16"
-                      },
-                      "IS_ACLK_ASYNC": {
-                        "value": "1"
-                      }
-                    },
-                    "interface_ports": {
-                      "S_AXIS": {
-                        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-                        "mode": "Slave",
-                        "bridges": [
-                          "M_AXIS"
-                        ]
-                      }
-                    }
-                  },
-                  "packetizing_fifo": {
-                    "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-                    "ip_revision": "15",
-                    "xci_name": "ecdcom_packetizing_fifo_0",
-                    "xci_path": "ip/ecdcom_packetizing_fifo_0/ecdcom_packetizing_fifo_0.xci",
-                    "inst_hier_path": "cmac/eth0/tx_cdc/packetizing_fifo",
-                    "parameters": {
-                      "FIFO_DEPTH": {
-                        "value": "512"
-                      },
-                      "FIFO_MODE": {
-                        "value": "2"
-                      }
-                    },
-                    "interface_ports": {
-                      "S_AXIS": {
-                        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-                        "mode": "Slave",
-                        "bridges": [
-                          "M_AXIS"
-                        ]
-                      }
-                    }
-                  },
-                  "slice": {
-                    "vlnv": "xilinx.com:ip:axis_register_slice:1.1",
-                    "ip_revision": "33",
-                    "xci_name": "ecdcom_slice_0",
-                    "xci_path": "ip/ecdcom_slice_0/ecdcom_slice_0.xci",
-                    "inst_hier_path": "cmac/eth0/tx_cdc/slice",
-                    "interface_ports": {
-                      "S_AXIS": {
-                        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-                        "mode": "Slave",
-                        "bridges": [
-                          "M_AXIS"
-                        ]
-                      }
-                    }
-                  }
-                },
-                "interface_nets": {
-                  "S_AXIS_1": {
-                    "interface_ports": [
-                      "S_AXIS",
-                      "slice/S_AXIS"
-                    ]
-                  },
-                  "axis_register_slice_0_M_AXIS": {
-                    "interface_ports": [
-                      "slice/M_AXIS",
-                      "cdc_fifo/S_AXIS"
-                    ]
-                  },
-                  "cdc_fifo_M_AXIS": {
-                    "interface_ports": [
-                      "packetizing_fifo/S_AXIS",
-                      "cdc_fifo/M_AXIS"
-                    ]
-                  },
-                  "packetizing_fifo_M_AXIS": {
-                    "interface_ports": [
-                      "M_AXIS",
-                      "packetizing_fifo/M_AXIS"
-                    ]
-                  }
-                },
-                "nets": {
-                  "cmac_clk_1": {
-                    "ports": [
-                      "cmac_clk",
-                      "cdc_fifo/m_axis_aclk",
-                      "packetizing_fifo/s_axis_aclk"
-                    ]
-                  },
-                  "cmac_resetn_1": {
-                    "ports": [
-                      "cmac_resetn",
-                      "packetizing_fifo/s_axis_aresetn"
-                    ]
-                  },
-                  "sys_clk_1": {
-                    "ports": [
-                      "sys_clk",
-                      "cdc_fifo/s_axis_aclk",
-                      "slice/aclk"
-                    ]
-                  },
-                  "sys_resetn_1": {
-                    "ports": [
-                      "sys_resetn",
-                      "cdc_fifo/s_axis_aresetn",
-                      "slice/aresetn"
-                    ]
-                  }
-                }
               }
             },
             "interface_nets": {
-              "axis_data_fifo_0_M_AXIS": {
-                "interface_ports": [
-                  "rx_out",
-                  "rx_cdc/M_AXIS"
-                ]
-              },
               "cmac_control_ctl_rx": {
                 "interface_ports": [
                   "cmac_control/ctl_rx",
@@ -1079,8 +805,8 @@
               },
               "cmac_usplus_axis_rx": {
                 "interface_ports": [
-                  "cmac_usplus/axis_rx",
-                  "rx_cdc/S_AXIS"
+                  "rx_out",
+                  "cmac_usplus/axis_rx"
                 ]
               },
               "cmac_usplus_gt_serial_port": {
@@ -1101,16 +827,10 @@
                   "cmac_usplus/gt_ref_clk"
                 ]
               },
-              "tx_cdc_M_AXIS": {
-                "interface_ports": [
-                  "tx_cdc/M_AXIS",
-                  "cmac_usplus/axis_tx"
-                ]
-              },
               "tx_in_1": {
                 "interface_ports": [
                   "tx_in",
-                  "tx_cdc/S_AXIS"
+                  "cmac_usplus/axis_tx"
                 ]
               }
             },
@@ -1119,13 +839,6 @@
                 "ports": [
                   "cmac_control/reset_rx_datapath",
                   "cmac_usplus/gtwiz_reset_rx_datapath"
-                ]
-              },
-              "cmac_control_rx_resetn_out": {
-                "ports": [
-                  "cmac_control/rx_resetn_out",
-                  "rx_cdc/cmac_resetn",
-                  "tx_cdc/cmac_resetn"
                 ]
               },
               "cmac_control_sync_rx_aligned": {
@@ -1143,27 +856,22 @@
               "cmac_usplus_gt_txusrclk2": {
                 "ports": [
                   "cmac_usplus/gt_txusrclk2",
-                  "rx_cdc/cmac_clk",
                   "cmac_usplus/rx_clk",
                   "cmac_clk",
-                  "tx_cdc/cmac_clk",
                   "cmac_control/rx_clk"
                 ]
               },
               "sys_clk_1": {
                 "ports": [
                   "sys_clk",
-                  "rx_cdc/sys_clk",
                   "cmac_usplus/gt_drpclk",
                   "cmac_usplus/init_clk",
-                  "cmac_usplus/drp_clk",
-                  "tx_cdc/sys_clk"
+                  "cmac_usplus/drp_clk"
                 ]
               },
               "sys_resetn_in_1": {
                 "ports": [
                   "sys_resetn_in",
-                  "tx_cdc/sys_resetn",
                   "cmac_control/sys_resetn_in"
                 ]
               }
@@ -1426,275 +1134,9 @@
                     "direction": "O"
                   }
                 }
-              },
-              "rx_cdc": {
-                "interface_ports": {
-                  "S_AXIS": {
-                    "mode": "Slave",
-                    "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-                    "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-                  },
-                  "M_AXIS": {
-                    "mode": "Master",
-                    "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-                    "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-                  }
-                },
-                "ports": {
-                  "cmac_resetn": {
-                    "type": "rst",
-                    "direction": "I"
-                  },
-                  "cmac_clk": {
-                    "type": "clk",
-                    "direction": "I"
-                  },
-                  "sys_clk": {
-                    "direction": "I"
-                  }
-                },
-                "components": {
-                  "rx_cdc": {
-                    "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-                    "ip_revision": "15",
-                    "xci_name": "ecdcom_rx_cdc_0",
-                    "xci_path": "ip/ecdcom_rx_cdc_0/ecdcom_rx_cdc_0.xci",
-                    "inst_hier_path": "cmac/eth_1/rx_cdc/rx_cdc",
-                    "parameters": {
-                      "FIFO_DEPTH": {
-                        "value": "16"
-                      },
-                      "IS_ACLK_ASYNC": {
-                        "value": "1"
-                      }
-                    },
-                    "interface_ports": {
-                      "S_AXIS": {
-                        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-                        "mode": "Slave",
-                        "bridges": [
-                          "M_AXIS"
-                        ]
-                      }
-                    }
-                  },
-                  "axis_register_slice": {
-                    "vlnv": "xilinx.com:ip:axis_register_slice:1.1",
-                    "ip_revision": "33",
-                    "xci_name": "ecdcom_axis_register_slice_1",
-                    "xci_path": "ip/ecdcom_axis_register_slice_1/ecdcom_axis_register_slice_1.xci",
-                    "inst_hier_path": "cmac/eth_1/rx_cdc/axis_register_slice",
-                    "interface_ports": {
-                      "S_AXIS": {
-                        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-                        "mode": "Slave",
-                        "bridges": [
-                          "M_AXIS"
-                        ]
-                      }
-                    }
-                  }
-                },
-                "interface_nets": {
-                  "S_AXIS_1": {
-                    "interface_ports": [
-                      "S_AXIS",
-                      "axis_register_slice/S_AXIS"
-                    ]
-                  },
-                  "axis_data_fifo_0_M_AXIS": {
-                    "interface_ports": [
-                      "M_AXIS",
-                      "rx_cdc/M_AXIS"
-                    ]
-                  },
-                  "axis_register_slice_M_AXIS": {
-                    "interface_ports": [
-                      "axis_register_slice/M_AXIS",
-                      "rx_cdc/S_AXIS"
-                    ]
-                  }
-                },
-                "nets": {
-                  "cmac_control_rx_resetn_out": {
-                    "ports": [
-                      "cmac_resetn",
-                      "rx_cdc/s_axis_aresetn",
-                      "axis_register_slice/aresetn"
-                    ]
-                  },
-                  "cmac_usplus_gt_txusrclk2": {
-                    "ports": [
-                      "cmac_clk",
-                      "rx_cdc/s_axis_aclk",
-                      "axis_register_slice/aclk"
-                    ]
-                  },
-                  "sys_clk_1": {
-                    "ports": [
-                      "sys_clk",
-                      "rx_cdc/m_axis_aclk"
-                    ]
-                  }
-                }
-              },
-              "tx_cdc": {
-                "interface_ports": {
-                  "S_AXIS": {
-                    "mode": "Slave",
-                    "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-                    "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-                  },
-                  "M_AXIS": {
-                    "mode": "Master",
-                    "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-                    "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-                  }
-                },
-                "ports": {
-                  "sys_resetn": {
-                    "direction": "I"
-                  },
-                  "sys_clk": {
-                    "direction": "I"
-                  },
-                  "cmac_clk": {
-                    "direction": "I"
-                  },
-                  "cmac_resetn": {
-                    "direction": "I"
-                  }
-                },
-                "components": {
-                  "cdc_fifo": {
-                    "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-                    "ip_revision": "15",
-                    "xci_name": "ecdcom_cdc_fifo_2",
-                    "xci_path": "ip/ecdcom_cdc_fifo_2/ecdcom_cdc_fifo_2.xci",
-                    "inst_hier_path": "cmac/eth_1/tx_cdc/cdc_fifo",
-                    "parameters": {
-                      "FIFO_DEPTH": {
-                        "value": "16"
-                      },
-                      "IS_ACLK_ASYNC": {
-                        "value": "1"
-                      }
-                    },
-                    "interface_ports": {
-                      "S_AXIS": {
-                        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-                        "mode": "Slave",
-                        "bridges": [
-                          "M_AXIS"
-                        ]
-                      }
-                    }
-                  },
-                  "packetizing_fifo": {
-                    "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-                    "ip_revision": "15",
-                    "xci_name": "ecdcom_packetizing_fifo_1",
-                    "xci_path": "ip/ecdcom_packetizing_fifo_1/ecdcom_packetizing_fifo_1.xci",
-                    "inst_hier_path": "cmac/eth_1/tx_cdc/packetizing_fifo",
-                    "parameters": {
-                      "FIFO_DEPTH": {
-                        "value": "512"
-                      },
-                      "FIFO_MODE": {
-                        "value": "2"
-                      }
-                    },
-                    "interface_ports": {
-                      "S_AXIS": {
-                        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-                        "mode": "Slave",
-                        "bridges": [
-                          "M_AXIS"
-                        ]
-                      }
-                    }
-                  },
-                  "slice": {
-                    "vlnv": "xilinx.com:ip:axis_register_slice:1.1",
-                    "ip_revision": "33",
-                    "xci_name": "ecdcom_slice_1",
-                    "xci_path": "ip/ecdcom_slice_1/ecdcom_slice_1.xci",
-                    "inst_hier_path": "cmac/eth_1/tx_cdc/slice",
-                    "interface_ports": {
-                      "S_AXIS": {
-                        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-                        "mode": "Slave",
-                        "bridges": [
-                          "M_AXIS"
-                        ]
-                      }
-                    }
-                  }
-                },
-                "interface_nets": {
-                  "S_AXIS_1": {
-                    "interface_ports": [
-                      "S_AXIS",
-                      "slice/S_AXIS"
-                    ]
-                  },
-                  "axis_register_slice_0_M_AXIS": {
-                    "interface_ports": [
-                      "slice/M_AXIS",
-                      "cdc_fifo/S_AXIS"
-                    ]
-                  },
-                  "cdc_fifo_M_AXIS": {
-                    "interface_ports": [
-                      "packetizing_fifo/S_AXIS",
-                      "cdc_fifo/M_AXIS"
-                    ]
-                  },
-                  "packetizing_fifo_M_AXIS": {
-                    "interface_ports": [
-                      "M_AXIS",
-                      "packetizing_fifo/M_AXIS"
-                    ]
-                  }
-                },
-                "nets": {
-                  "cmac_clk_1": {
-                    "ports": [
-                      "cmac_clk",
-                      "cdc_fifo/m_axis_aclk",
-                      "packetizing_fifo/s_axis_aclk"
-                    ]
-                  },
-                  "cmac_resetn_1": {
-                    "ports": [
-                      "cmac_resetn",
-                      "packetizing_fifo/s_axis_aresetn"
-                    ]
-                  },
-                  "sys_clk_1": {
-                    "ports": [
-                      "sys_clk",
-                      "cdc_fifo/s_axis_aclk",
-                      "slice/aclk"
-                    ]
-                  },
-                  "sys_resetn_1": {
-                    "ports": [
-                      "sys_resetn",
-                      "cdc_fifo/s_axis_aresetn",
-                      "slice/aresetn"
-                    ]
-                  }
-                }
               }
             },
             "interface_nets": {
-              "axis_data_fifo_0_M_AXIS": {
-                "interface_ports": [
-                  "rx_out",
-                  "rx_cdc/M_AXIS"
-                ]
-              },
               "cmac_control_ctl_rx": {
                 "interface_ports": [
                   "cmac_control/ctl_rx",
@@ -1721,8 +1163,8 @@
               },
               "cmac_usplus_axis_rx": {
                 "interface_ports": [
-                  "cmac_usplus/axis_rx",
-                  "rx_cdc/S_AXIS"
+                  "rx_out",
+                  "cmac_usplus/axis_rx"
                 ]
               },
               "cmac_usplus_gt_serial_port": {
@@ -1743,16 +1185,10 @@
                   "cmac_usplus/gt_ref_clk"
                 ]
               },
-              "tx_cdc_M_AXIS": {
-                "interface_ports": [
-                  "tx_cdc/M_AXIS",
-                  "cmac_usplus/axis_tx"
-                ]
-              },
               "tx_in_1": {
                 "interface_ports": [
                   "tx_in",
-                  "tx_cdc/S_AXIS"
+                  "cmac_usplus/axis_tx"
                 ]
               }
             },
@@ -1761,13 +1197,6 @@
                 "ports": [
                   "cmac_control/reset_rx_datapath",
                   "cmac_usplus/gtwiz_reset_rx_datapath"
-                ]
-              },
-              "cmac_control_rx_resetn_out": {
-                "ports": [
-                  "cmac_control/rx_resetn_out",
-                  "rx_cdc/cmac_resetn",
-                  "tx_cdc/cmac_resetn"
                 ]
               },
               "cmac_control_sync_rx_aligned": {
@@ -1787,8 +1216,6 @@
                   "cmac_usplus/gt_txusrclk2",
                   "cmac_usplus/rx_clk",
                   "cmac_clk",
-                  "rx_cdc/cmac_clk",
-                  "tx_cdc/cmac_clk",
                   "cmac_control/rx_clk"
                 ]
               },
@@ -1797,15 +1224,12 @@
                   "sys_clk",
                   "cmac_usplus/gt_drpclk",
                   "cmac_usplus/init_clk",
-                  "cmac_usplus/drp_clk",
-                  "rx_cdc/sys_clk",
-                  "tx_cdc/sys_clk"
+                  "cmac_usplus/drp_clk"
                 ]
               },
               "sys_resetn_in_1": {
                 "ports": [
                   "sys_resetn_in",
-                  "tx_cdc/sys_resetn",
                   "cmac_control/sys_resetn_in"
                 ]
               }
@@ -1944,6 +1368,18 @@
               "eth_link_state"
             ]
           },
+          "eth0_cmac_clk": {
+            "ports": [
+              "eth0/cmac_clk",
+              "cmac0_clk"
+            ]
+          },
+          "eth_1_cmac_clk": {
+            "ports": [
+              "eth_1/cmac_clk",
+              "cmac1_clk"
+            ]
+          },
           "pcie_bridge_0_axi_aclk": {
             "ports": [
               "sys_clk",
@@ -2028,6 +1464,9 @@
           },
           "lvds_clk": {
             "type": "clk",
+            "direction": "I"
+          },
+          "cmac_clk": {
             "direction": "I"
           }
         },
@@ -2537,9 +1976,227 @@
                 }
               }
             }
+          },
+          "cmac_tx_cdc": {
+            "vlnv": "xilinx.com:module_ref:ecdcom_cmac_tx_cdc:1.0",
+            "ip_revision": "1",
+            "xci_name": "ecdcom_ecdcom_cmac_tx_cdc_0_1",
+            "xci_path": "ip/ecdcom_ecdcom_cmac_tx_cdc_0_1/ecdcom_ecdcom_cmac_tx_cdc_0_1.xci",
+            "inst_hier_path": "fd_manager/cmac_tx_cdc",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "ecdcom_cmac_tx_cdc",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "m_axis": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "64",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "HAS_TLAST": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "322265625",
+                    "value_src": "const_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_cmac_usplus_0_gt_txusrclk2",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "m_axis_tdata",
+                    "direction": "O",
+                    "left": "511",
+                    "right": "0"
+                  },
+                  "TKEEP": {
+                    "physical_name": "m_axis_tkeep",
+                    "direction": "O",
+                    "left": "63",
+                    "right": "0"
+                  },
+                  "TLAST": {
+                    "physical_name": "m_axis_tlast",
+                    "direction": "O"
+                  },
+                  "TVALID": {
+                    "physical_name": "m_axis_tvalid",
+                    "direction": "O"
+                  },
+                  "TREADY": {
+                    "physical_name": "m_axis_tready",
+                    "direction": "I"
+                  }
+                }
+              },
+              "s_axis": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "64",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "HAS_TLAST": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "250000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "s_axis_tdata",
+                    "direction": "I",
+                    "left": "511",
+                    "right": "0"
+                  },
+                  "TKEEP": {
+                    "physical_name": "s_axis_tkeep",
+                    "direction": "I",
+                    "left": "63",
+                    "right": "0"
+                  },
+                  "TLAST": {
+                    "physical_name": "s_axis_tlast",
+                    "direction": "I"
+                  },
+                  "TVALID": {
+                    "physical_name": "s_axis_tvalid",
+                    "direction": "I"
+                  },
+                  "TREADY": {
+                    "physical_name": "s_axis_tready",
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "sys_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "s_axis",
+                    "value_src": "constant"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "resetn",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "250000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "resetn": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "cmac_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "m_axis",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "322265625",
+                    "value_src": "const_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_cmac_usplus_0_gt_txusrclk2",
+                    "value_src": "default_prop"
+                  }
+                }
+              }
+            }
           }
         },
         "interface_nets": {
+          "ecdcom_cmac_tx_cdc_0_m_axis": {
+            "interface_ports": [
+              "axis_out",
+              "cmac_tx_cdc/m_axis"
+            ]
+          },
           "ecdcom_mgr_lvds_out": {
             "interface_ports": [
               "lvds_out",
@@ -2564,9 +2221,9 @@
               "ecdcom_mgr/fd_in1"
             ]
           },
-          "rdmx_sequencer_0_axis_out": {
+          "rdmx_sequencer_axis_out": {
             "interface_ports": [
-              "axis_out",
+              "cmac_tx_cdc/s_axis",
               "rdmx_sequencer/axis_out"
             ]
           }
@@ -2576,7 +2233,14 @@
             "ports": [
               "clk",
               "rdmx_sequencer/clk",
-              "ecdcom_mgr/clk"
+              "ecdcom_mgr/clk",
+              "cmac_tx_cdc/sys_clk"
+            ]
+          },
+          "cmac_clk_1": {
+            "ports": [
+              "cmac_clk",
+              "cmac_tx_cdc/cmac_clk"
             ]
           },
           "ecdcom_mgr_enable": {
@@ -2619,7 +2283,8 @@
             "ports": [
               "resetn",
               "rdmx_sequencer/resetn",
-              "ecdcom_mgr/resetn"
+              "ecdcom_mgr/resetn",
+              "cmac_tx_cdc/resetn"
             ]
           },
           "start_stb_1": {
@@ -2674,15 +2339,21 @@
           "clk": {
             "type": "clk",
             "direction": "I"
+          },
+          "cmac0_clk": {
+            "direction": "I"
+          },
+          "cmac1_clk": {
+            "direction": "I"
           }
         },
         "components": {
-          "ecdcom_router_0": {
+          "cmac0_router": {
             "vlnv": "xilinx.com:module_ref:ecdcom_router:1.0",
             "ip_revision": "1",
             "xci_name": "ecdcom_ecdcom_router_0_0",
             "xci_path": "ip/ecdcom_ecdcom_router_0_0/ecdcom_ecdcom_router_0_0.xci",
-            "inst_hier_path": "routers/ecdcom_router_0",
+            "inst_hier_path": "routers/cmac0_router",
             "reference_info": {
               "ref_type": "hdl",
               "ref_name": "ecdcom_router",
@@ -2848,12 +2519,12 @@
               }
             }
           },
-          "ecdcom_router_1": {
+          "cmac1_router": {
             "vlnv": "xilinx.com:module_ref:ecdcom_router:1.0",
             "ip_revision": "1",
             "xci_name": "ecdcom_ecdcom_router_1_0",
             "xci_path": "ip/ecdcom_ecdcom_router_1_0/ecdcom_ecdcom_router_1_0.xci",
-            "inst_hier_path": "routers/ecdcom_router_1",
+            "inst_hier_path": "routers/cmac1_router",
             "reference_info": {
               "ref_type": "hdl",
               "ref_name": "ecdcom_router",
@@ -3019,12 +2690,12 @@
               }
             }
           },
-          "qsfp0_bad_packet_filter": {
+          "cmac0_bad_packet_filter": {
             "vlnv": "xilinx.com:module_ref:ecdcom_bad_packet_filter:1.0",
             "ip_revision": "1",
             "xci_name": "ecdcom_qsfp0_bad_packet_filter_0",
             "xci_path": "ip/ecdcom_qsfp0_bad_packet_filter_0/ecdcom_qsfp0_bad_packet_filter_0.xci",
-            "inst_hier_path": "routers/qsfp0_bad_packet_filter",
+            "inst_hier_path": "routers/cmac0_bad_packet_filter",
             "reference_info": {
               "ref_type": "hdl",
               "ref_name": "ecdcom_bad_packet_filter",
@@ -3223,12 +2894,12 @@
               }
             }
           },
-          "qsfp1_bad_packet_filter": {
+          "cmac1_bad_packet_filter": {
             "vlnv": "xilinx.com:module_ref:ecdcom_bad_packet_filter:1.0",
             "ip_revision": "1",
             "xci_name": "ecdcom_qsfp1_bad_packet_filter_0",
             "xci_path": "ip/ecdcom_qsfp1_bad_packet_filter_0/ecdcom_qsfp1_bad_packet_filter_0.xci",
-            "inst_hier_path": "routers/qsfp1_bad_packet_filter",
+            "inst_hier_path": "routers/cmac1_bad_packet_filter",
             "reference_info": {
               "ref_type": "hdl",
               "ref_name": "ecdcom_bad_packet_filter",
@@ -3424,6 +3095,446 @@
                 "direction": "O",
                 "left": "31",
                 "right": "0"
+              }
+            }
+          },
+          "cmac0_rx_cdc": {
+            "vlnv": "xilinx.com:module_ref:ecdcom_cmac_rx_cdc:1.0",
+            "ip_revision": "1",
+            "xci_name": "ecdcom_ecdcom_cmac_rx_cdc_0_0",
+            "xci_path": "ip/ecdcom_ecdcom_cmac_rx_cdc_0_0/ecdcom_ecdcom_cmac_rx_cdc_0_0.xci",
+            "inst_hier_path": "routers/cmac0_rx_cdc",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "ecdcom_cmac_rx_cdc",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "m_axis": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "64",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "HAS_TLAST": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "250000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "m_axis_tdata",
+                    "direction": "O",
+                    "left": "511",
+                    "right": "0"
+                  },
+                  "TKEEP": {
+                    "physical_name": "m_axis_tkeep",
+                    "direction": "O",
+                    "left": "63",
+                    "right": "0"
+                  },
+                  "TLAST": {
+                    "physical_name": "m_axis_tlast",
+                    "direction": "O"
+                  },
+                  "TUSER": {
+                    "physical_name": "m_axis_tuser",
+                    "direction": "O"
+                  },
+                  "TVALID": {
+                    "physical_name": "m_axis_tvalid",
+                    "direction": "O"
+                  },
+                  "TREADY": {
+                    "physical_name": "m_axis_tready",
+                    "direction": "I"
+                  }
+                }
+              },
+              "s_axis": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "64",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "HAS_TLAST": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "322265625",
+                    "value_src": "const_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_cmac_usplus_0_gt_txusrclk2",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "s_axis_tdata",
+                    "direction": "I",
+                    "left": "511",
+                    "right": "0"
+                  },
+                  "TKEEP": {
+                    "physical_name": "s_axis_tkeep",
+                    "direction": "I",
+                    "left": "63",
+                    "right": "0"
+                  },
+                  "TLAST": {
+                    "physical_name": "s_axis_tlast",
+                    "direction": "I"
+                  },
+                  "TUSER": {
+                    "physical_name": "s_axis_tuser",
+                    "direction": "I"
+                  },
+                  "TVALID": {
+                    "physical_name": "s_axis_tvalid",
+                    "direction": "I"
+                  },
+                  "TREADY": {
+                    "physical_name": "s_axis_tready",
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "cmac_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "s_axis",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "322265625",
+                    "value_src": "const_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_cmac_usplus_0_gt_txusrclk2",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "sys_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "m_axis",
+                    "value_src": "constant"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "resetn",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "250000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "resetn": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              }
+            }
+          },
+          "cmac1_rx_cdc": {
+            "vlnv": "xilinx.com:module_ref:ecdcom_cmac_rx_cdc:1.0",
+            "ip_revision": "1",
+            "xci_name": "ecdcom_cmac0_rx_cdc_0",
+            "xci_path": "ip/ecdcom_cmac0_rx_cdc_0/ecdcom_cmac0_rx_cdc_0.xci",
+            "inst_hier_path": "routers/cmac1_rx_cdc",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "ecdcom_cmac_rx_cdc",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "m_axis": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "64",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "HAS_TLAST": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "250000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "m_axis_tdata",
+                    "direction": "O",
+                    "left": "511",
+                    "right": "0"
+                  },
+                  "TKEEP": {
+                    "physical_name": "m_axis_tkeep",
+                    "direction": "O",
+                    "left": "63",
+                    "right": "0"
+                  },
+                  "TLAST": {
+                    "physical_name": "m_axis_tlast",
+                    "direction": "O"
+                  },
+                  "TUSER": {
+                    "physical_name": "m_axis_tuser",
+                    "direction": "O"
+                  },
+                  "TVALID": {
+                    "physical_name": "m_axis_tvalid",
+                    "direction": "O"
+                  },
+                  "TREADY": {
+                    "physical_name": "m_axis_tready",
+                    "direction": "I"
+                  }
+                }
+              },
+              "s_axis": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "64",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "HAS_TLAST": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "322265625",
+                    "value_src": "const_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_cmac_usplus_1_gt_txusrclk2",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "s_axis_tdata",
+                    "direction": "I",
+                    "left": "511",
+                    "right": "0"
+                  },
+                  "TKEEP": {
+                    "physical_name": "s_axis_tkeep",
+                    "direction": "I",
+                    "left": "63",
+                    "right": "0"
+                  },
+                  "TLAST": {
+                    "physical_name": "s_axis_tlast",
+                    "direction": "I"
+                  },
+                  "TUSER": {
+                    "physical_name": "s_axis_tuser",
+                    "direction": "I"
+                  },
+                  "TVALID": {
+                    "physical_name": "s_axis_tvalid",
+                    "direction": "I"
+                  },
+                  "TREADY": {
+                    "physical_name": "s_axis_tready",
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "cmac_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "s_axis",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "322265625",
+                    "value_src": "const_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_cmac_usplus_1_gt_txusrclk2",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "sys_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "m_axis",
+                    "value_src": "constant"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "resetn",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "250000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "resetn": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
               }
             }
           }
@@ -3432,37 +3543,49 @@
           "axis_fd0_in_1": {
             "interface_ports": [
               "axis_fd0_in",
-              "qsfp0_bad_packet_filter/AXIS_IN"
+              "cmac0_rx_cdc/s_axis"
             ]
           },
           "axis_fd1_in_1": {
             "interface_ports": [
               "axis_fd1_in",
-              "qsfp1_bad_packet_filter/AXIS_IN"
+              "cmac1_rx_cdc/s_axis"
+            ]
+          },
+          "cmac0_rx_cdc1_m_axis": {
+            "interface_ports": [
+              "cmac1_rx_cdc/m_axis",
+              "cmac1_bad_packet_filter/AXIS_IN"
+            ]
+          },
+          "ecdcom_cmac_rx_cdc_0_m_axis": {
+            "interface_ports": [
+              "cmac0_rx_cdc/m_axis",
+              "cmac0_bad_packet_filter/AXIS_IN"
             ]
           },
           "ecdcom_router_0_axis_fdp": {
             "interface_ports": [
               "axis_fd0_out",
-              "ecdcom_router_0/axis_fdp"
+              "cmac0_router/axis_fdp"
             ]
           },
           "ecdcom_router_1_axis_fdp": {
             "interface_ports": [
               "axis_fd1_out",
-              "ecdcom_router_1/axis_fdp"
+              "cmac1_router/axis_fdp"
             ]
           },
           "qsfp0_bad_packet_filter_AXIS_OUT": {
             "interface_ports": [
-              "qsfp0_bad_packet_filter/AXIS_OUT",
-              "ecdcom_router_0/axis_in"
+              "cmac0_bad_packet_filter/AXIS_OUT",
+              "cmac0_router/axis_in"
             ]
           },
           "qsfp1_bad_packet_filter_AXIS_OUT": {
             "interface_ports": [
-              "qsfp1_bad_packet_filter/AXIS_OUT",
-              "ecdcom_router_1/axis_in"
+              "cmac1_bad_packet_filter/AXIS_OUT",
+              "cmac1_router/axis_in"
             ]
           }
         },
@@ -3470,38 +3593,54 @@
           "clk_0_1": {
             "ports": [
               "clk",
-              "qsfp1_bad_packet_filter/clk",
-              "ecdcom_router_0/clk",
-              "ecdcom_router_1/clk",
-              "qsfp0_bad_packet_filter/clk"
+              "cmac1_bad_packet_filter/clk",
+              "cmac0_router/clk",
+              "cmac1_router/clk",
+              "cmac0_bad_packet_filter/clk",
+              "cmac1_rx_cdc/sys_clk",
+              "cmac0_rx_cdc/sys_clk"
+            ]
+          },
+          "cmac0_clk_1": {
+            "ports": [
+              "cmac0_clk",
+              "cmac0_rx_cdc/cmac_clk"
+            ]
+          },
+          "cmac1_clk_1": {
+            "ports": [
+              "cmac1_clk",
+              "cmac1_rx_cdc/cmac_clk"
             ]
           },
           "ecdcom_mgr_enable": {
             "ports": [
               "enable",
-              "ecdcom_router_0/enable",
-              "ecdcom_router_1/enable"
+              "cmac0_router/enable",
+              "cmac1_router/enable"
             ]
           },
           "qsfp0_bad_packet_filter_bad_packet_count": {
             "ports": [
-              "qsfp0_bad_packet_filter/bad_packet_count",
+              "cmac0_bad_packet_filter/bad_packet_count",
               "qsfp0_malformed"
             ]
           },
           "qsfp1_bad_packet_filter_bad_packet_count": {
             "ports": [
-              "qsfp1_bad_packet_filter/bad_packet_count",
+              "cmac1_bad_packet_filter/bad_packet_count",
               "qsfp1_malformed"
             ]
           },
           "reset_mgr_resetn_out": {
             "ports": [
               "resetn",
-              "ecdcom_router_0/resetn",
-              "ecdcom_router_1/resetn",
-              "qsfp0_bad_packet_filter/resetn",
-              "qsfp1_bad_packet_filter/resetn"
+              "cmac0_router/resetn",
+              "cmac1_router/resetn",
+              "cmac0_bad_packet_filter/resetn",
+              "cmac1_bad_packet_filter/resetn",
+              "cmac1_rx_cdc/resetn",
+              "cmac0_rx_cdc/resetn"
             ]
           }
         }
@@ -3529,6 +3668,9 @@
           },
           "fifo_overflow": {
             "direction": "O"
+          },
+          "cmac_clk": {
+            "direction": "I"
           }
         },
         "components": {
@@ -3886,18 +4028,236 @@
                 }
               }
             }
+          },
+          "cmac_tx_cdc": {
+            "vlnv": "xilinx.com:module_ref:ecdcom_cmac_tx_cdc:1.0",
+            "ip_revision": "1",
+            "xci_name": "ecdcom_ecdcom_cmac_tx_cdc_0_0",
+            "xci_path": "ip/ecdcom_ecdcom_cmac_tx_cdc_0_0/ecdcom_ecdcom_cmac_tx_cdc_0_0.xci",
+            "inst_hier_path": "uw_manager/cmac_tx_cdc",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "ecdcom_cmac_tx_cdc",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "m_axis": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "64",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "HAS_TLAST": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "322265625",
+                    "value_src": "const_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_cmac_usplus_1_gt_txusrclk2",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "m_axis_tdata",
+                    "direction": "O",
+                    "left": "511",
+                    "right": "0"
+                  },
+                  "TKEEP": {
+                    "physical_name": "m_axis_tkeep",
+                    "direction": "O",
+                    "left": "63",
+                    "right": "0"
+                  },
+                  "TLAST": {
+                    "physical_name": "m_axis_tlast",
+                    "direction": "O"
+                  },
+                  "TVALID": {
+                    "physical_name": "m_axis_tvalid",
+                    "direction": "O"
+                  },
+                  "TREADY": {
+                    "physical_name": "m_axis_tready",
+                    "direction": "I"
+                  }
+                }
+              },
+              "s_axis": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "64",
+                    "value_src": "auto"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "1",
+                    "value_src": "auto"
+                  },
+                  "HAS_TLAST": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "250000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_clk_0",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "s_axis_tdata",
+                    "direction": "I",
+                    "left": "511",
+                    "right": "0"
+                  },
+                  "TKEEP": {
+                    "physical_name": "s_axis_tkeep",
+                    "direction": "I",
+                    "left": "63",
+                    "right": "0"
+                  },
+                  "TLAST": {
+                    "physical_name": "s_axis_tlast",
+                    "direction": "I"
+                  },
+                  "TVALID": {
+                    "physical_name": "s_axis_tvalid",
+                    "direction": "I"
+                  },
+                  "TREADY": {
+                    "physical_name": "s_axis_tready",
+                    "direction": "O"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "sys_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "s_axis",
+                    "value_src": "constant"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "resetn",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "250000000",
+                    "value_src": "user_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_clk_0",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "resetn": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "cmac_clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "m_axis",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "322265625",
+                    "value_src": "const_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "ecdcom_cmac_usplus_1_gt_txusrclk2",
+                    "value_src": "default_prop"
+                  }
+                }
+              }
+            }
           }
         },
         "interface_nets": {
+          "cmac_tx_cdc_m_axis": {
+            "interface_ports": [
+              "axis_out",
+              "cmac_tx_cdc/m_axis"
+            ]
+          },
           "ecdcom_uw_buffer_axis_out": {
             "interface_ports": [
               "uw_buffer/axis_out",
               "rdmx_sequencer/axis_in"
             ]
           },
-          "rdmx_sequencer_1_axis_out": {
+          "rdmx_sequencer_axis_out": {
             "interface_ports": [
-              "axis_out",
+              "cmac_tx_cdc/s_axis",
               "rdmx_sequencer/axis_out"
             ]
           },
@@ -3913,14 +4273,22 @@
             "ports": [
               "clk",
               "rdmx_sequencer/clk",
-              "uw_buffer/clk"
+              "uw_buffer/clk",
+              "cmac_tx_cdc/sys_clk"
+            ]
+          },
+          "cmac_clk_1": {
+            "ports": [
+              "cmac_clk",
+              "cmac_tx_cdc/cmac_clk"
             ]
           },
           "reset_mgr_resetn_out": {
             "ports": [
               "resetn",
               "rdmx_sequencer/resetn",
-              "uw_buffer/resetn"
+              "uw_buffer/resetn",
+              "cmac_tx_cdc/resetn"
             ]
           },
           "uw_buffer_fifo_overflow": {
@@ -4053,6 +4421,20 @@
           "uw_manager/clk",
           "fd_manager/clk",
           "ecdcom_reset_ctl/clk"
+        ]
+      },
+      "cmac_cmac0_clk": {
+        "ports": [
+          "cmac/cmac0_clk",
+          "routers/cmac0_clk",
+          "fd_manager/cmac_clk"
+        ]
+      },
+      "cmac_cmac1_clk": {
+        "ports": [
+          "cmac/cmac1_clk",
+          "routers/cmac1_clk",
+          "uw_manager/cmac_clk"
         ]
       },
       "cmac_eth_link_state": {

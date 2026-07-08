@@ -67,6 +67,9 @@
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_bad_packet_filter.v"/>
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_uw_buffer.v"/>
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_reset_ctl.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_axis_slice.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_cmac_rx_cdc.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_cmac_tx_cdc.v"/>
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/ecdcom.bd"/>
         </FileCollection>
       </ModuleReference>

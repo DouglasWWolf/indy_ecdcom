@@ -7,35 +7,36 @@
    "No Loops_ExpandedHierarchyInLayout":"",
    "No Loops_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port axis_fd0_out -pg 1 -lvl 3 -x 700 -y 60 -defaultsOSRD
-preplace port axis_fd0_in -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
-preplace port axis_fd1_out -pg 1 -lvl 3 -x 700 -y 340 -defaultsOSRD
-preplace port axis_fd1_in -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
-preplace port port-id_resetn -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
-preplace port port-id_enable -pg 1 -lvl 0 -x 0 -y 280 -defaultsOSRD
-preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
-preplace portBus qsfp0_malformed -pg 1 -lvl 3 -x 700 -y 180 -defaultsOSRD
-preplace portBus qsfp1_malformed -pg 1 -lvl 3 -x 700 -y 460 -defaultsOSRD
-preplace inst ecdcom_router_0 -pg 1 -lvl 2 -x 550 -y 40 -defaultsOSRD -pinDir axis_fdp right -pinY axis_fdp 20R -pinDir axis_in left -pinY axis_in 20L -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L -pinDir enable left -pinY enable 80L
-preplace inst ecdcom_router_1 -pg 1 -lvl 2 -x 550 -y 320 -defaultsOSRD -pinDir axis_fdp right -pinY axis_fdp 20R -pinDir axis_in left -pinY axis_in 20L -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L -pinDir enable left -pinY enable 80L
-preplace inst qsfp0_bad_packet_filter -pg 1 -lvl 1 -x 210 -y 40 -defaultsOSRD -pinDir AXIS_IN left -pinY AXIS_IN 20L -pinDir AXIS_OUT right -pinY AXIS_OUT 20R -pinDir clk left -pinY clk 120L -pinDir resetn left -pinY resetn 140L -pinDir bad_packet_strb right -pinY bad_packet_strb 40R -pinBusDir bad_packet_count right -pinBusY bad_packet_count 140R
-preplace inst qsfp1_bad_packet_filter -pg 1 -lvl 1 -x 210 -y 320 -defaultsOSRD -pinDir AXIS_IN left -pinY AXIS_IN 20L -pinDir AXIS_OUT right -pinY AXIS_OUT 20R -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L -pinDir bad_packet_strb right -pinY bad_packet_strb 40R -pinBusDir bad_packet_count right -pinBusY bad_packet_count 140R
-preplace netloc clk_0_1 1 0 2 50 240 380
-preplace netloc ecdcom_mgr_enable 1 0 2 NJ 280 420
-preplace netloc qsfp0_bad_packet_filter_bad_packet_count 1 1 2 NJ 180 NJ
-preplace netloc qsfp1_bad_packet_filter_bad_packet_count 1 1 2 NJ 460 NJ
-preplace netloc reset_mgr_resetn_out 1 0 2 30 260 400
-preplace netloc axis_fd0_in_1 1 0 1 NJ 60
-preplace netloc axis_fd1_in_1 1 0 1 NJ 340
-preplace netloc ecdcom_router_0_axis_fdp 1 2 1 NJ 60
-preplace netloc ecdcom_router_1_axis_fdp 1 2 1 NJ 340
-preplace netloc qsfp0_bad_packet_filter_AXIS_OUT 1 1 1 N 60
-preplace netloc qsfp1_bad_packet_filter_AXIS_OUT 1 1 1 N 340
-levelinfo -pg 1 0 210 550 700
-pagesize -pg 1 -db -bbox -sgen -130 0 920 520
+preplace port axis_fd0_out -pg 1 -lvl 4 -x 1000 -y 60 -defaultsOSRD
+preplace port axis_fd0_in -pg 1 -lvl 0 -x -390 -y 60 -defaultsOSRD
+preplace port axis_fd1_out -pg 1 -lvl 4 -x 1000 -y 340 -defaultsOSRD
+preplace port axis_fd1_in -pg 1 -lvl 0 -x -390 -y 340 -defaultsOSRD
+preplace port port-id_resetn -pg 1 -lvl 0 -x -390 -y 180 -defaultsOSRD
+preplace port port-id_enable -pg 1 -lvl 0 -x -390 -y 280 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -390 -y 160 -defaultsOSRD
+preplace portBus qsfp0_malformed -pg 1 -lvl 4 -x 1000 -y 180 -defaultsOSRD
+preplace portBus qsfp1_malformed -pg 1 -lvl 4 -x 1000 -y 460 -defaultsOSRD
+preplace inst ecdcom_router_0 -pg 1 -lvl 3 -x 850 -y 40 -defaultsOSRD -pinDir axis_fdp right -pinY axis_fdp 20R -pinDir axis_in left -pinY axis_in 20L -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L -pinDir enable left -pinY enable 80L
+preplace inst ecdcom_router_1 -pg 1 -lvl 3 -x 850 -y 320 -defaultsOSRD -pinDir axis_fdp right -pinY axis_fdp 20R -pinDir axis_in left -pinY axis_in 20L -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L -pinDir enable left -pinY enable 80L
+preplace inst qsfp0_bad_packet_filter -pg 1 -lvl 2 -x 510 -y 40 -defaultsOSRD -pinDir AXIS_IN left -pinY AXIS_IN 20L -pinDir AXIS_OUT right -pinY AXIS_OUT 20R -pinDir clk left -pinY clk 120L -pinDir resetn left -pinY resetn 140L -pinDir bad_packet_strb right -pinY bad_packet_strb 40R -pinBusDir bad_packet_count right -pinBusY bad_packet_count 140R
+preplace inst qsfp1_bad_packet_filter -pg 1 -lvl 2 -x 510 -y 320 -defaultsOSRD -pinDir AXIS_IN left -pinY AXIS_IN 20L -pinDir AXIS_OUT right -pinY AXIS_OUT 20R -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L -pinDir bad_packet_strb right -pinY bad_packet_strb 40R -pinBusDir bad_packet_count right -pinBusY bad_packet_count 140R
+preplace inst ecdcom_cmac_rx_cdc_0 -pg 1 -lvl 1 -x -210 -y 30 -defaultsOSRD -pinDir m_axis right -pinY m_axis 20R -pinDir s_axis left -pinY s_axis 20L -pinDir cmac_clk left -pinY cmac_clk 40L -pinDir sys_clk left -pinY sys_clk 60L -pinDir resetn left -pinY resetn 80L
+preplace netloc clk_0_1 1 0 3 -350 240 320 240 680
+preplace netloc ecdcom_mgr_enable 1 0 3 NJ 280 N 280 720
+preplace netloc qsfp0_bad_packet_filter_bad_packet_count 1 2 2 NJ 180 NJ
+preplace netloc qsfp1_bad_packet_filter_bad_packet_count 1 2 2 NJ 460 NJ
+preplace netloc reset_mgr_resetn_out 1 0 3 -370 260 340 260 700
+preplace netloc axis_fd0_in_1 1 0 2 -330J 170 -90
+preplace netloc axis_fd1_in_1 1 0 2 NJ 340 N
+preplace netloc ecdcom_router_0_axis_fdp 1 3 1 NJ 60
+preplace netloc ecdcom_router_1_axis_fdp 1 3 1 NJ 340
+preplace netloc qsfp0_bad_packet_filter_AXIS_OUT 1 2 1 N 60
+preplace netloc qsfp1_bad_packet_filter_AXIS_OUT 1 2 1 N 340
+levelinfo -pg 1 -390 -210 510 850 1000
+pagesize -pg 1 -db -bbox -sgen -520 -160 1220 520
 ",
    "No Loops_ScaleFactor":"1.0",
-   "No Loops_TopLeft":"-298,-58",
+   "No Loops_TopLeft":"-167,-58",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
 preplace port axis_fd0_out -pg 1 -lvl 3 -x 670 -y 80 -defaultsOSRD

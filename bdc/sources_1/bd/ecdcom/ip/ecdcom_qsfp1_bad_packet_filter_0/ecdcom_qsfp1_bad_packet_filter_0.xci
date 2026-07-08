@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "ecdcom_qsfp1_bad_packet_filter_0",
-    "cell_name": "routers/qsfp1_bad_packet_filter",
+    "cell_name": "cmac1_bad_packet_filter",
     "component_reference": "xilinx.com:module_ref:ecdcom_bad_packet_filter:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../project.gen/sources_1/bd/ecdcom/ip/ecdcom_qsfp1_bad_packet_filter_0",
