@@ -20,23 +20,23 @@ preplace inst cmac_control -pg 1 -lvl 1 -x 190 -y 50 -swap {13 1 2 3 4 5 6 7 8 9
 preplace netloc cmac_control_reset_rx_datapath 1 1 1 N 310
 preplace netloc cmac_control_sync_rx_aligned 1 0 1 NJ 90
 preplace netloc cmac_control_sys_reset_out 1 1 1 N 330
-preplace netloc cmac_usplus_gt_txusrclk2 1 1 2 360 10 750
-preplace netloc sys_clk_1 1 0 2 NJ 390 360
+preplace netloc cmac_usplus_gt_txusrclk2 1 1 2 370 10 740
+preplace netloc sys_clk_1 1 0 2 NJ 390 370
 preplace netloc sys_resetn_in_1 1 0 1 NJ 70
 preplace netloc cmac_control_ctl_rx 1 1 1 N 110
 preplace netloc cmac_control_ctl_tx 1 1 1 N 90
 preplace netloc cmac_control_gt_trans_debug 1 1 1 N 130
 preplace netloc cmac_control_rs_fec 1 1 1 N 150
+preplace netloc cmac_usplus_axis_rx 1 2 1 NJ 130
 preplace netloc cmac_usplus_gt_serial_port 1 2 1 NJ 70
 preplace netloc cmac_usplus_stat_rx 1 1 1 N 70
 preplace netloc gt_ref_clk_1 1 2 1 NJ 90
 preplace netloc tx_in_1 1 2 1 NJ 110
-preplace netloc cmac_usplus_axis_rx 1 2 1 NJ 130
 levelinfo -pg 1 0 190 560 770
 pagesize -pg 1 -db -bbox -sgen -160 0 920 570
 ",
    "No Loops_ScaleFactor":"1.0",
-   "No Loops_TopLeft":"-313,-35",
+   "No Loops_TopLeft":"-285,-23",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
 preplace port gt_serial_port -pg 1 -lvl 4 -x 1030 -y 190 -defaultsOSRD

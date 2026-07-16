@@ -207,6 +207,36 @@
                 "VT": "PM"
             },
             "V7": {
+                "VT": "CX",
+                "BA": "0x00000000",
+                "HA": "0x00000FFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MX": "/ecdcom",
+                "MI": "M_AXI",
+                "SX": "/ecdcom_ctl",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:ecdcom_ctl:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V8": {
+                "VT": "CX",
+                "BA": "0x00000000",
+                "HA": "0x00000FFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MX": "/ecdcom",
+                "MI": "M_AXI",
+                "SX": "/lvds_ctl/lvds_ctl",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:lvds_ctl:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V9": {
                 "VT": "AC",
                 "BA": "0x00000000",
                 "HA": "0x1FFFFFFF",
@@ -224,7 +254,25 @@
                 "TM": "both",
                 "TU": "memory"
             },
-            "V8": {
+            "V10": {
+                "VT": "AC",
+                "BA": "0x00001000",
+                "HA": "0x00001FFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI",
+                "MX": "/ecdcom/ecdcom_axis_axi_serv",
+                "MI": "M_AXI",
+                "MS": "SEG_ecdcom_ctl_reg0",
+                "MV": "xilinx.com:module_ref:ecdcom_axis_axi_server:1.0",
+                "SX": "/ecdcom_ctl",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:ecdcom_ctl:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V11": {
                 "VT": "AC",
                 "BA": "0x0000000000001000",
                 "HA": "0x0000000000001FFF",
@@ -242,7 +290,25 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V9": {
+            "V12": {
+                "VT": "AC",
+                "BA": "0x00002000",
+                "HA": "0x00002FFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI",
+                "MX": "/ecdcom/ecdcom_axis_axi_serv",
+                "MI": "M_AXI",
+                "MS": "SEG_lvds_ctl_reg0",
+                "MV": "xilinx.com:module_ref:ecdcom_axis_axi_server:1.0",
+                "SX": "/lvds_ctl/lvds_ctl",
+                "SI": "S_AXI",
+                "SS": "reg0",
+                "SV": "xilinx.com:module_ref:lvds_ctl:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V13": {
                 "VT": "AC",
                 "BA": "0x0000000000002000",
                 "HA": "0x0000000000002FFF",
@@ -271,6 +337,14 @@
                 "trg": "V4"
             },
             {
+                "src": "V0",
+                "trg": "V7"
+            },
+            {
+                "src": "V0",
+                "trg": "V8"
+            },
+            {
                 "src": "V1",
                 "trg": "V2"
             },
@@ -293,27 +367,37 @@
                 "EH": "10"
             },
             {
-                "src": "V7",
+                "src": "V9",
                 "trg": "V5",
                 "EH": "6"
             },
             {
-                "src": "V7",
+                "src": "V9",
                 "trg": "V6",
                 "EH": "10"
             },
             {
-                "src": "V8",
+                "src": "V10",
                 "trg": "V5",
                 "EH": "6"
             },
             {
-                "src": "V9",
+                "src": "V11",
                 "trg": "V5",
                 "EH": "6"
             },
             {
-                "src": "V9",
+                "src": "V12",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V13",
+                "trg": "V5",
+                "EH": "6"
+            },
+            {
+                "src": "V13",
                 "trg": "V6",
                 "EH": "10"
             }

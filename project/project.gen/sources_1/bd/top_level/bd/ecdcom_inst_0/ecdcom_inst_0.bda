@@ -187,6 +187,42 @@
                 "VH": "2",
                 "VT": "PM",
                 "TU": "active"
+            },
+            "V3": {
+                "VT": "AC",
+                "BA": "0x00001000",
+                "HA": "0x00001FFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI",
+                "MX": "/ecdcom_axis_axi_serv",
+                "MI": "M_AXI",
+                "MS": "SEG_ecdcom_ctl_reg0",
+                "MV": "xilinx.com:module_ref:ecdcom_axis_axi_server:1.0",
+                "SX": "/",
+                "SI": "M_AXI",
+                "SS": ":ecdcom_ctl:S_AXI:reg0",
+                "SV": "::ecdcom_inst_0_imp:",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V4": {
+                "VT": "AC",
+                "BA": "0x00002000",
+                "HA": "0x00002FFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI",
+                "MX": "/ecdcom_axis_axi_serv",
+                "MI": "M_AXI",
+                "MS": "SEG_lvds_ctl_reg0",
+                "MV": "xilinx.com:module_ref:ecdcom_axis_axi_server:1.0",
+                "SX": "/",
+                "SI": "M_AXI",
+                "SS": ":lvds_ctl:lvds_ctl:S_AXI:reg0",
+                "SV": "::ecdcom_inst_0_imp:",
+                "TM": "both",
+                "TU": "register"
             }
         },
         "edges": [
@@ -197,6 +233,16 @@
             {
                 "src": "V1",
                 "trg": "V2"
+            },
+            {
+                "src": "V3",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V4",
+                "trg": "V2",
+                "EH": "2"
             }
         ]
     }
