@@ -25,6 +25,9 @@ module ecdcom_ctl # (parameter AW=8)
     output reg reset_stb,
     input      reset_done,
 
+    // This is a software controlled reset
+    output reg soft_resetn_out,
+
     // The number of frame-data packets received on each channel
     input[63:0]  fd0_rcvd, fd1_rcvd,
 
@@ -293,6 +296,25 @@ always @(posedge clk) begin
 
         endcase
     end
+end
+//=============================================================================
+
+//=============================================================================
+// Here we generate a software controllable reset output that asserts for
+// a few cycles any time "reset_stb" goes high
+//=============================================================================
+reg[5:0] soft_resetn_ctr;
+//-----------------------------------------------------------------------------
+always @(posedge clk) begin
+    if (resetn == 0)
+        soft_resetn_ctr <= -1;
+    else if (reset_stb)
+        soft_resetn_ctr <= -1;
+    else if (soft_resetn_ctr)
+        soft_resetn_ctr <= soft_resetn_ctr - 1;
+
+    // The external resetn is active while we're counting down
+    soft_resetn_out <= (soft_resetn_ctr == 0);
 end
 //=============================================================================
 

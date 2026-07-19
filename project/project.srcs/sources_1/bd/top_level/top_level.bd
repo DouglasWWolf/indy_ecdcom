@@ -873,6 +873,10 @@
                 "value": "AXI4LITE",
                 "value_src": "constant"
               },
+              "FREQ_HZ": {
+                "value": "250000000",
+                "value_src": "user_prop"
+              },
               "ID_WIDTH": {
                 "value": "0",
                 "value_src": "constant"
@@ -956,6 +960,26 @@
               "MAX_BURST_LENGTH": {
                 "value": "1",
                 "value_src": "auto"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_level_xdma_0_0_axi_aclk",
+                "value_src": "default_prop"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1",
+                "value_src": "user_prop"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1",
+                "value_src": "user_prop"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0",
+                "value_src": "user_prop"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0",
+                "value_src": "user_prop"
               }
             },
             "memory_map_ref": "S_AXI",
@@ -1069,6 +1093,14 @@
               "ASSOCIATED_RESET": {
                 "value": "resetn",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "250000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "top_level_xdma_0_0_axi_aclk",
+                "value_src": "default_prop"
               }
             }
           },
@@ -1092,6 +1124,9 @@
           "reset_done": {
             "type": "rst",
             "direction": "I"
+          },
+          "soft_resetn_out": {
+            "direction": "O"
           },
           "fd0_rcvd": {
             "direction": "I",
@@ -2472,9 +2507,6 @@
           "reset_stb": {
             "direction": "I"
           },
-          "start_stb": {
-            "direction": "I"
-          },
           "uw_overflow": {
             "direction": "O"
           },
@@ -2485,6 +2517,9 @@
           "clk": {
             "type": "clk",
             "direction": "I"
+          },
+          "start_stb": {
+            "direction": "I"
           }
         },
         "post_compiled_compname": "ecdcom_inst_0",
@@ -2492,7 +2527,7 @@
         "variant_info": {
           "ecdcom.bd": {
             "scoped_diagram": "ecdcom_inst_0.bd",
-            "design_checksum": "0xC946B7F852681982",
+            "design_checksum": "0x82C7ECFA52681982",
             "ref_name": "ecdcom",
             "ref_subinst_path": "top_level_ecdcom_0",
             "ref_type": "Block Design",
@@ -2593,6 +2628,12 @@
         "ports": [
           "ecdcom_ctl/start_stb",
           "ecdcom/start_stb"
+        ]
+      },
+      "ecdcom_ctl_soft_resetn_out": {
+        "ports": [
+          "ecdcom_ctl/soft_resetn_out",
+          "lvds_ctl/sys_resetn"
         ]
       },
       "ecdcom_ctl_uw_ipg": {
@@ -2703,7 +2744,6 @@
         "ports": [
           "pcie_bridge/sys_resetn",
           "smartconnect/aresetn",
-          "lvds_ctl/sys_resetn",
           "uw_xmit/resetn",
           "ecdcom_ctl/resetn"
         ]

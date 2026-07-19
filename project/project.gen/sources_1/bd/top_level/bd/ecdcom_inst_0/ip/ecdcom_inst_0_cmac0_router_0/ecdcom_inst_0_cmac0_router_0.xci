@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "ecdcom_inst_0_cmac0_router_0",
-    "cell_name": "routers/cmac0_router",
+    "cell_name": "ecdcom/routers/cmac0_router",
     "component_reference": "xilinx.com:module_ref:ecdcom_router:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

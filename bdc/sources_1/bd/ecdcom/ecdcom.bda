@@ -187,6 +187,24 @@
                 "VH": "2",
                 "VT": "PM",
                 "TU": "active"
+            },
+            "V3": {
+                "VT": "AC",
+                "BA": "0x00000000",
+                "HA": "0xFFFFFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "M_AXI",
+                "MX": "/ecdcom_axis_axi_serv",
+                "MI": "M_AXI",
+                "MS": "SEG_M_AXI_Reg",
+                "MV": "xilinx.com:module_ref:ecdcom_axis_axi_server:1.0",
+                "SX": "/",
+                "SI": "M_AXI",
+                "SS": "Reg",
+                "SV": "::ecdcom_imp:",
+                "TM": "both",
+                "TU": "register"
             }
         },
         "edges": [
@@ -197,6 +215,11 @@
             {
                 "src": "V1",
                 "trg": "V2"
+            },
+            {
+                "src": "V3",
+                "trg": "V2",
+                "EH": "2"
             }
         ]
     }

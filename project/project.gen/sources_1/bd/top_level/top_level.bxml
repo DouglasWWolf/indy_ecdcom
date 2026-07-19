@@ -2,11 +2,47 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="top_level" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1784182104"/>
-    <Generation Name="SIMULATION" State="RESET" Timestamp="1784182104"/>
-    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1784182104"/>
-    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1784182104"/>
-    <FileCollection Name="SOURCES" Type="SOURCES"/>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1784444386"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1784444386"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1784444386"/>
+    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1784444386"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="synth/top_level.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="sim/top_level.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="top_level.bmj" Type="BMJ">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="PRE_SYNTHESIS"/>
+        <UsedIn Val="PRE_SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="top_level_bmstub.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="PRE_SYNTHESIS"/>
+        <UsedIn Val="PRE_SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="top_level_ooc.xdc" Type="XDC">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="OUT_OF_CONTEXT"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+    </FileCollection>
     <BlockContainerCollection>
       <BlockContainer InstPath="/ecdcom" IsPR="false" State="Stale">
         <ActiveVariantSynth FileName="bd/ecdcom_inst_0/ecdcom_inst_0.bd"/>
@@ -26,17 +62,17 @@
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_cmac_tx_cdc.v"/>
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_rdmx_sequencer.v"/>
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_axis_mux.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_rdmx_encoder.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_settings.vh"/>
-          <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_mgr.v"/>
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_rdmx_decoder.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_settings.vh"/>
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_router.v"/>
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_bad_packet_filter.v"/>
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_cmac_rx_cdc.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_rdmx_encoder.v"/>
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_uw_buffer.v"/>
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_reset_ctl.v"/>
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_axi4_lite_master.v"/>
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_axis_axi_server.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/ecdcom/src/ecdcom_mgr.v"/>
           <File Name="../../../../../bdc/sources_1/bd/ecdcom/ecdcom.bd"/>
         </FileCollection>
       </ModuleReference>

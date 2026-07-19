@@ -174,7 +174,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../bdc/sources_1/bd/ecdcom/src/ecdcom_rdmx_encoder.v">
+      <File Path="$PPRDIR/../bdc/sources_1/bd/ecdcom/src/ecdcom_rdmx_decoder.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -186,20 +186,6 @@
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
           <Attr Name="IsVisible" Val="1"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../bdc/sources_1/bd/ecdcom/src/ecdcom_mgr.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../bdc/sources_1/bd/ecdcom/src/ecdcom_rdmx_decoder.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../bdc/sources_1/bd/ecdcom/src/ecdcom_router.v">
@@ -217,6 +203,13 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../bdc/sources_1/bd/ecdcom/src/ecdcom_cmac_rx_cdc.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../bdc/sources_1/bd/ecdcom/src/ecdcom_rdmx_encoder.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -245,6 +238,13 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../bdc/sources_1/bd/ecdcom/src/ecdcom_axis_axi_server.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../bdc/sources_1/bd/ecdcom/src/ecdcom_mgr.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -417,7 +417,6 @@
     <FileSet Name="ecdcom_inst_0" Type="BlockSrcs" RelSrcDir="$PGENDIR/sources_1/bd/top_level/bd/ecdcom_inst_0" RelGenDir="$PGENDIR/sources_1/bd/top_level/bd/ecdcom_inst_0">
       <File Path="$PGENDIR/sources_1/bd/top_level/bd/ecdcom_inst_0/ecdcom_inst_0.bd">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

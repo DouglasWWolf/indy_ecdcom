@@ -7,28 +7,34 @@
    "No Loops_ExpandedHierarchyInLayout":"",
    "No Loops_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port axis_in -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
-preplace port axis_out -pg 1 -lvl 4 -x 840 -y 110 -defaultsOSRD
-preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
-preplace port port-id_resetn -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
-preplace port port-id_fifo_overflow -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD -left
-preplace port port-id_cmac_clk -pg 1 -lvl 4 -x 840 -y 130 -defaultsOSRD -right
-preplace inst uw_buffer -pg 1 -lvl 1 -x 160 -y 50 -defaultsOSRD -pinDir axis_in left -pinY axis_in 20L -pinDir axis_out right -pinY axis_out 20R -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L -pinDir fifo_overflow left -pinY fifo_overflow 80L
-preplace inst rdmx_sequencer -pg 1 -lvl 2 -x 450 -y 50 -defaultsOSRD -pinDir axis_in left -pinY axis_in 20L -pinDir axis_out right -pinY axis_out 60R -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L
-preplace inst cmac_tx_cdc -pg 1 -lvl 3 -x 700 -y 90 -defaultsOSRD -pinDir m_axis right -pinY m_axis 20R -pinDir s_axis left -pinY s_axis 20L -pinDir sys_clk left -pinY sys_clk 80L -pinDir resetn left -pinY resetn 100L -pinDir cmac_clk right -pinY cmac_clk 40R
-preplace netloc clk_1 1 0 3 20 10 300 170 N
-preplace netloc reset_mgr_resetn_out 1 0 3 20 190 320 190 N
-preplace netloc uw_buffer_fifo_overflow 1 0 1 NJ 130
-preplace netloc cmac_clk_1 1 3 1 NJ 130
-preplace netloc ecdcom_uw_buffer_axis_out 1 1 1 N 70
-preplace netloc uwdata_in_1 1 0 1 NJ 70
-preplace netloc cmac_tx_cdc_m_axis 1 3 1 NJ 110
-preplace netloc rdmx_sequencer_axis_out 1 2 1 N 110
-levelinfo -pg 1 0 160 450 700 840
-pagesize -pg 1 -db -bbox -sgen -140 0 960 250
+preplace port axis_in -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace port axis_out -pg 1 -lvl 4 -x 860 -y 130 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace port port-id_resetn -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace port port-id_fifo_overflow -pg 1 -lvl 0 -x 0 -y 210 -defaultsOSRD -left
+preplace port port-id_cmac_clk -pg 1 -lvl 4 -x 860 -y 150 -defaultsOSRD -right
+preplace port port-id_soft_resetn -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace port port-id_enable -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
+preplace port port-id_halted -pg 1 -lvl 0 -x 0 -y 190 -defaultsOSRD -left
+preplace inst uw_buffer -pg 1 -lvl 1 -x 180 -y 70 -defaultsOSRD -pinDir axis_in left -pinY axis_in 20L -pinDir axis_out right -pinY axis_out 20R -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L -pinDir soft_resetn left -pinY soft_resetn 80L -pinDir enable left -pinY enable 100L -pinDir halted left -pinY halted 120L -pinDir fifo_overflow left -pinY fifo_overflow 140L
+preplace inst rdmx_sequencer -pg 1 -lvl 2 -x 470 -y 70 -defaultsOSRD -pinDir axis_in left -pinY axis_in 20L -pinDir axis_out right -pinY axis_out 60R -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L
+preplace inst cmac_tx_cdc -pg 1 -lvl 3 -x 720 -y 110 -defaultsOSRD -pinDir m_axis right -pinY m_axis 20R -pinDir s_axis left -pinY s_axis 20L -pinDir sys_clk left -pinY sys_clk 80L -pinDir resetn left -pinY resetn 100L -pinDir cmac_clk right -pinY cmac_clk 40R
+preplace netloc clk_1 1 0 3 20 10 340 190 NJ
+preplace netloc cmac_clk_1 1 3 1 NJ 150
+preplace netloc enable_1 1 0 1 NJ 170
+preplace netloc reset_mgr_resetn_out 1 0 3 40 30 320 210 NJ
+preplace netloc soft_resetn_1 1 0 1 NJ 150
+preplace netloc uw_buffer_fifo_overflow 1 0 1 NJ 210
+preplace netloc uw_buffer_halted 1 0 1 NJ 190
+preplace netloc cmac_tx_cdc_m_axis 1 3 1 NJ 130
+preplace netloc ecdcom_uw_buffer_axis_out 1 1 1 N 90
+preplace netloc rdmx_sequencer_axis_out 1 2 1 N 130
+preplace netloc uwdata_in_1 1 0 1 NJ 90
+levelinfo -pg 1 0 180 470 720 860
+pagesize -pg 1 -db -bbox -sgen -150 0 980 270
 ",
    "No Loops_ScaleFactor":"1.0",
-   "No Loops_TopLeft":"-285,-194",
+   "No Loops_TopLeft":"-247,-173",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
 preplace port axis_in -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD

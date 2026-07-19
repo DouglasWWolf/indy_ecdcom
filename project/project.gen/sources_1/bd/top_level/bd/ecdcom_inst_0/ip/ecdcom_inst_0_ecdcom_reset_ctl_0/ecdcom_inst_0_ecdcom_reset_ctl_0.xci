@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "ecdcom_inst_0_ecdcom_reset_ctl_0",
-    "cell_name": "ecdcom_reset_ctl",
+    "cell_name": "ecdcom/ecdcom_reset_ctl",
     "component_reference": "xilinx.com:module_ref:ecdcom_reset_ctl:1.0",
     "ip_revision": "1",
     "gen_directory": ".",
@@ -37,9 +37,13 @@
     "boundary": {
       "ports": {
         "clk": [ { "direction": "in" } ],
+        "uw_buffer_halted": [ { "direction": "in" } ],
+        "start_stb": [ { "direction": "in" } ],
         "reset_stb": [ { "direction": "in" } ],
+        "soft_resetn_out": [ { "direction": "out" } ],
         "resetn_out": [ { "direction": "out" } ],
-        "reset_done": [ { "direction": "out" } ]
+        "reset_done": [ { "direction": "out" } ],
+        "enable": [ { "direction": "out" } ]
       },
       "interfaces": {
         "reset_done": {

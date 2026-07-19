@@ -37,9 +37,13 @@
     "boundary": {
       "ports": {
         "clk": [ { "direction": "in" } ],
+        "uw_buffer_halted": [ { "direction": "in" } ],
+        "start_stb": [ { "direction": "in" } ],
         "reset_stb": [ { "direction": "in" } ],
+        "soft_resetn_out": [ { "direction": "out" } ],
         "resetn_out": [ { "direction": "out" } ],
-        "reset_done": [ { "direction": "out" } ]
+        "reset_done": [ { "direction": "out" } ],
+        "enable": [ { "direction": "out" } ]
       },
       "interfaces": {
         "reset_done": {

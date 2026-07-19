@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "ecdcom_inst_0_cmac_tx_cdc_0",
-    "cell_name": "cmac/cmac_tx_cdc",
+    "cell_name": "ecdcom/cmac/cmac_tx_cdc",
     "component_reference": "xilinx.com:module_ref:ecdcom_cmac_tx_cdc:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

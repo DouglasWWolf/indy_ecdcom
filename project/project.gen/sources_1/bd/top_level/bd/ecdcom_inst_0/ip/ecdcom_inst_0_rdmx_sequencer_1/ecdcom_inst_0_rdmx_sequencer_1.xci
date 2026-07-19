@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "ecdcom_inst_0_rdmx_sequencer_1",
-    "cell_name": "uw_manager/rdmx_sequencer",
+    "cell_name": "ecdcom/uw_manager/rdmx_sequencer",
     "component_reference": "xilinx.com:module_ref:ecdcom_rdmx_sequencer:1.0",
     "ip_revision": "1",
     "gen_directory": ".",
