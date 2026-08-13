@@ -6,6 +6,8 @@
 //   Date     Who   Ver  Changes
 //====================================================================================
 // 21-Mar-25  DWW     1  Initial creation
+//
+// 17-Aug-26  DWW     2  Minor cleanup to make syntax clearer.  No functional change.
 //====================================================================================
 
 /*
@@ -62,7 +64,9 @@ wire[ 2 *8-1:0] rdmx_seq;
 wire[ 5 *8-1:0] rdmx_reserved;
 
 // Big-endian RDMX header
-wire[511:0] be_rdmx_header =
+wire[511:0] be_rdmx_header;
+
+assign
 {
     // Ethernet header fields - 14 bytes
     eth_dst_mac,
@@ -94,7 +98,7 @@ wire[511:0] be_rdmx_header =
     rdmx_user_field,
     rdmx_flags,
     rdmx_reserved
-};
+} = be_rdmx_header;
 
 localparam PROT_UDP   = 8'h11;
 localparam PROT_IPV4  = 8'h45;
