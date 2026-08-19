@@ -2,160 +2,9 @@
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <spirit:vendor>xilinx.com</spirit:vendor>
   <spirit:library>customized_ip</spirit:library>
-  <spirit:name>top_level_lvds_ctl_0_0</spirit:name>
+  <spirit:name>top_level_axi_revision_0_0</spirit:name>
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
-    <spirit:busInterface>
-      <spirit:name>lvds_in</spirit:name>
-      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
-      <spirit:slave/>
-      <spirit:portMaps>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>TDATA</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>lvds_in_tdata</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>TVALID</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>lvds_in_tvalid</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>TREADY</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>lvds_in_tready</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-      </spirit:portMaps>
-      <spirit:parameters>
-        <spirit:parameter>
-          <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.LVDS_IN.TDATA_NUM_BYTES">64</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>TDEST_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.LVDS_IN.TDEST_WIDTH">0</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>TID_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.LVDS_IN.TID_WIDTH">0</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>TUSER_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.LVDS_IN.TUSER_WIDTH">0</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>HAS_TREADY</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.LVDS_IN.HAS_TREADY">1</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>HAS_TSTRB</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.LVDS_IN.HAS_TSTRB">0</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>HAS_TKEEP</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.LVDS_IN.HAS_TKEEP">0</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>HAS_TLAST</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.LVDS_IN.HAS_TLAST">0</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.LVDS_IN.FREQ_HZ">192000000</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>PHASE</spirit:name>
-          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.LVDS_IN.PHASE">0.0</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.LVDS_IN.CLK_DOMAIN">top_level_clk_wiz_0_0_lvds_clk</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>LAYERED_METADATA</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.LVDS_IN.LAYERED_METADATA">undef</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>INSERT_VIP</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.LVDS_IN.INSERT_VIP">0</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-      </spirit:parameters>
-    </spirit:busInterface>
     <spirit:busInterface>
       <spirit:name>S_AXI</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
@@ -338,7 +187,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ">192000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -356,7 +205,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ADDR_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.ADDR_WIDTH">8</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.ADDR_WIDTH">7</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -545,7 +394,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.CLK_DOMAIN">top_level_clk_wiz_0_0_lvds_clk</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXI.CLK_DOMAIN"/>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -600,43 +449,7 @@
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>reset_selftest_stb</spirit:name>
-      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
-      <spirit:master/>
-      <spirit:portMaps>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>RST</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>reset_selftest_stb</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-      </spirit:portMaps>
-      <spirit:parameters>
-        <spirit:parameter>
-          <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.RESET_SELFTEST_STB.POLARITY">ACTIVE_LOW</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>none</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>INSERT_VIP</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.RESET_SELFTEST_STB.INSERT_VIP">0</spirit:value>
-          <spirit:vendorExtensions>
-            <xilinx:parameterInfo>
-              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
-            </xilinx:parameterInfo>
-          </spirit:vendorExtensions>
-        </spirit:parameter>
-      </spirit:parameters>
-    </spirit:busInterface>
-    <spirit:busInterface>
-      <spirit:name>resetn</spirit:name>
+      <spirit:name>AXI_ARESETN</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
       <spirit:slave/>
@@ -646,18 +459,18 @@
             <spirit:name>RST</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>resetn</spirit:name>
+            <spirit:name>AXI_ARESETN</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.RESETN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXI_ARESETN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>INSERT_VIP</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.RESETN.INSERT_VIP">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.AXI_ARESETN.INSERT_VIP">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
@@ -667,7 +480,7 @@
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>clk</spirit:name>
+      <spirit:name>AXI_ACLK</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
       <spirit:slave/>
@@ -677,22 +490,22 @@
             <spirit:name>CLK</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>clk</spirit:name>
+            <spirit:name>AXI_ACLK</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF">lvds_in:S_AXI</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXI_ACLK.ASSOCIATED_BUSIF">S_AXI</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_RESET</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET">resetn</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXI_ACLK.ASSOCIATED_RESET">AXI_ARESETN</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ">192000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AXI_ACLK.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -701,7 +514,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AXI_ACLK.FREQ_TOLERANCE_HZ">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -710,7 +523,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
-          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.PHASE">0.0</spirit:value>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AXI_ACLK.PHASE">0.0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -719,7 +532,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN">top_level_clk_wiz_0_0_lvds_clk</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AXI_ACLK.CLK_DOMAIN"/>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -728,7 +541,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ASSOCIATED_PORT</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_PORT"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AXI_ACLK.ASSOCIATED_PORT"/>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -737,7 +550,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>INSERT_VIP</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLK.INSERT_VIP">0</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.AXI_ACLK.INSERT_VIP">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
@@ -755,7 +568,7 @@
         <spirit:name>reg0</spirit:name>
         <spirit:displayName>reg0</spirit:displayName>
         <spirit:baseAddress spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:baseAddress>
-        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="pow(2,(spirit:decode(id(&apos;MODELPARAM_VALUE.AW&apos;)) - 1) - 0 + 1)" spirit:minimum="4096" spirit:rangeType="long">4096</spirit:range>
+        <spirit:range spirit:format="bitString" spirit:bitStringLength="13" spirit:minimum="4096" spirit:rangeType="long">0x1000</spirit:range>
         <spirit:width spirit:format="long">32</spirit:width>
         <spirit:usage>register</spirit:usage>
       </spirit:addressBlock>
@@ -764,107 +577,24 @@
   <spirit:model>
     <spirit:ports>
       <spirit:port>
-        <spirit:name>clk</spirit:name>
+        <spirit:name>AXI_ACLK</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>resetn</spirit:name>
+        <spirit:name>AXI_ARESETN</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>lvds_in_tdata</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">511</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>lvds_in_tvalid</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>lvds_in_tready</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>fd_host_size</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>reg</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>lvds_error</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>reset_selftest_stb</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>reg</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -875,12 +605,12 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AW&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long">6</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -895,26 +625,7 @@
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>S_AXI_AWPROT</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">2</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -929,10 +640,29 @@
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXI_AWPROT</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
@@ -945,7 +675,7 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -960,7 +690,7 @@
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -979,7 +709,7 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -994,7 +724,7 @@
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -1010,7 +740,7 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -1022,7 +752,7 @@
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -1034,7 +764,7 @@
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -1048,12 +778,27 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AW&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long">6</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>S_AXI_ARVALID</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -1072,22 +817,7 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>S_AXI_ARVALID</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -1102,7 +832,7 @@
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -1118,7 +848,7 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -1130,7 +860,7 @@
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -1146,7 +876,7 @@
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -1158,7 +888,7 @@
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:typeName>wire</spirit:typeName>
               <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -1168,13 +898,6 @@
         </spirit:wire>
       </spirit:port>
     </spirit:ports>
-    <spirit:modelParameters>
-      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
-        <spirit:name>AW</spirit:name>
-        <spirit:displayName>Aw</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AW">8</spirit:value>
-      </spirit:modelParameter>
-    </spirit:modelParameters>
   </spirit:model>
   <spirit:choices>
     <spirit:choice>
@@ -1183,52 +906,34 @@
       <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
     </spirit:choice>
   </spirit:choices>
-  <spirit:description>xilinx.com:module_ref:lvds_ctl:1.0</spirit:description>
+  <spirit:description>xilinx.com:module_ref:axi_revision:1.0</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
-      <spirit:name>AW</spirit:name>
-      <spirit:displayName>Aw</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AW">8</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">top_level_lvds_ctl_0_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">top_level_axi_revision_0_0</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
-      <xilinx:displayName>lvds_ctl_v1_0</xilinx:displayName>
+      <xilinx:displayName>axi_revision_v1_0</xilinx:displayName>
       <xilinx:definitionSource>module_ref</xilinx:definitionSource>
       <xilinx:coreRevision>1</xilinx:coreRevision>
       <xilinx:configElementInfos>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_PORT" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LVDS_IN.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LVDS_IN.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LVDS_IN.HAS_TKEEP" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LVDS_IN.HAS_TLAST" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LVDS_IN.HAS_TREADY" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LVDS_IN.HAS_TSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LVDS_IN.LAYERED_METADATA" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LVDS_IN.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LVDS_IN.TDATA_NUM_BYTES" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LVDS_IN.TDEST_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LVDS_IN.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.LVDS_IN.TUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RESETN.POLARITY" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RESET_SELFTEST_STB.POLARITY" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_ACLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_ACLK.ASSOCIATED_PORT" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_ACLK.ASSOCIATED_RESET" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_ACLK.CLK_DOMAIN" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_ACLK.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_ACLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_ACLK.PHASE" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_ARESETN.POLARITY" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ADDR_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.AWUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.BUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.CLK_DOMAIN" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.DATA_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_BRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
@@ -1241,16 +946,16 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.MAX_BURST_LENGTH" xilinx:valueSource="auto" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="auto" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_THREADS" xilinx:valueSource="user_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_THREADS" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="auto" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_THREADS" xilinx:valueSource="user_prop" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_THREADS" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.PHASE" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.READ_WRITE_MODE" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.RUSER_BITS_PER_BYTE" xilinx:valueSource="user_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.RUSER_BITS_PER_BYTE" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.RUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.SUPPORTS_NARROW_BURST" xilinx:valueSource="auto" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_BITS_PER_BYTE" xilinx:valueSource="user_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_BITS_PER_BYTE" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>

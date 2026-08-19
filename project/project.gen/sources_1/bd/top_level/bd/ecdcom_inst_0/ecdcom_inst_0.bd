@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x52681982B2B08132",
+      "boundary_crc": "0x52681982ED19FE14",
       "design_src": "/home/wolf/fpga/indy_ecdcom/bdc/sources_1/bd/ecdcom/ecdcom.bd",
       "device": "xcku15p-ffve1517-3-e",
       "name": "ecdcom_inst_0",
@@ -5997,6 +5997,12 @@
                 "range": "4K",
                 "width": "12",
                 "usage": "register"
+              },
+              ":axi_revision:S_AXI:reg0": {
+                "base_address": "0",
+                "range": "4K",
+                "width": "12",
+                "usage": "register"
               }
             }
           }
@@ -6006,6 +6012,11 @@
         "address_spaces": {
           "M_AXI": {
             "segments": {
+              "SEG_axi_revision_reg0": {
+                "address_block": "/M_AXI/:axi_revision:S_AXI:reg0",
+                "offset": "0x00000000",
+                "range": "4K"
+              },
               "SEG_ecdcom_ctl_reg0": {
                 "address_block": "/M_AXI/:ecdcom_ctl:S_AXI:reg0",
                 "offset": "0x00001000",

@@ -132,6 +132,34 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/src/timestamp.vh">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+          <Attr Name="IsVisible" Val="1"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/src/git_hash.vh">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+          <Attr Name="IsVisible" Val="1"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/src/revision_history.vh">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+          <Attr Name="IsVisible" Val="1"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/src/common/axi_revision.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../bdc/sources_1/bd/ecdcom/src/cmac_control.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>

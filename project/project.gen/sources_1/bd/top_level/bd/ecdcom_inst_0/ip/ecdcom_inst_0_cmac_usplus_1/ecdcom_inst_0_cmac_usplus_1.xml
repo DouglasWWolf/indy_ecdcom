@@ -31907,12 +31907,12 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_DRPCLK_PORT.PHASE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REF_CLK.BOARD.ASSOCIATED_PARAM" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REF_CLK.CAN_DEBUG" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REF_CLK.FREQ_HZ" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REF_CLK.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REF_CLK_OUT_PORT.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REF_CLK_OUT_PORT.ASSOCIATED_PORT" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REF_CLK_OUT_PORT.ASSOCIATED_RESET" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REF_CLK_OUT_PORT.CLK_DOMAIN" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REF_CLK_OUT_PORT.FREQ_HZ" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REF_CLK_OUT_PORT.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REF_CLK_OUT_PORT.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_REF_CLK_OUT_PORT.PHASE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.GT_RXRECCLKOUT_PORT.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>

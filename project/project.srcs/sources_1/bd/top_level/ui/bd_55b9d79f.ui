@@ -23,8 +23,8 @@ preplace inst one -pg 1 -lvl 1 -x 170 -y 280 -defaultsOSRD -pinBusDir dout right
 preplace netloc clock_buffer_IBUF_DS_ODIV2 1 1 1 N 200
 preplace netloc clock_buffer_IBUF_OUT 1 1 1 N 180
 preplace netloc one_dout 1 1 1 N 300
+preplace netloc pcie_bridge_0_axi_aclk 1 1 2 310 360 650
 preplace netloc pcie_bridge_0_axi_aresetn 1 2 1 N 100
-preplace netloc pcie_bridge_0_axi_aclk 1 1 2 320 360 650
 preplace netloc CLK_IN_D_0_1 1 0 1 NJ 180
 preplace netloc Conn1 1 2 1 NJ 80
 preplace netloc Conn2 1 2 1 NJ 60
