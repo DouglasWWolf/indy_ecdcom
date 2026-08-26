@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "ecdcom_inst_0_ecdcom_axis_mux_0_0",
-    "cell_name": "cmac/ecdcom_axis_mux_0",
+    "cell_name": "ecdcom/cmac/ecdcom_axis_mux_0",
     "component_reference": "xilinx.com:module_ref:ecdcom_axis_mux:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

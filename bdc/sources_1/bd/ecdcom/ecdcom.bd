@@ -5368,8 +5368,8 @@
           "cmac/sys_clk",
           "uw_manager/clk",
           "ecdcom_axis_axi_serv/clk",
-          "ecdcom_reset_ctl/clk",
-          "ecdcom_mgr/clk"
+          "ecdcom_mgr/clk",
+          "ecdcom_reset_ctl/clk"
         ]
       },
       "cmac_cmac0_clk": {

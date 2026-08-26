@@ -5,6 +5,11 @@
 //   Date     Who   Ver  Changes
 //=============================================================================
 // 04-Jul-26  DWW     1  Initial creation
+//
+// 25-Aug-26  DWW     2  "reset_done" now reflects the state of both the 
+//                       soft-reset and the initial reset.  This ensures that
+//                       at power-up, reset_done doesn't get asserted until
+//                       after the initial power-up reset is complete
 //=============================================================================
 
 /*
@@ -56,7 +61,8 @@ reg      r_resetn_out = 0;
 always @(posedge clk) begin
     if (init_counter)
         init_counter <= init_counter - 1;
-    else
+    
+    if (init_counter < 64)
         r_resetn_out <= 1;
 end
 //=============================================================================
@@ -92,7 +98,7 @@ always @(posedge clk) begin
         1:  if (system_halted || (reset_counter == 0)) begin
                 r_soft_resetn_out <= 0;
                 reset_counter     <= 256;
-                rsm_state         <= 2;
+                rsm_state         <= (reset_stb) ? 1 : 2;
             end
 
         2:  if (reset_counter < 32) begin
@@ -106,8 +112,9 @@ always @(posedge clk) begin
     endcase
 end
 
-// Reset is complete when the state machine is idle
-assign reset_done = (rsm_state == 0 && reset_stb == 0);
+// Reset is complete when the state machine is idle and the power-on reset
+// is complete
+assign reset_done = (rsm_state == 0 && reset_stb == 0 && init_counter == 0);
 //==========================================================================
 
 
